@@ -9,3 +9,4 @@ _pruebas/
 .firebase/
 .claude/
 firebase-debug*.log
+web/test/demo.html

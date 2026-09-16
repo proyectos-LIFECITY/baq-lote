@@ -37,6 +37,7 @@ la app lo omite y lo avisa en el informe.
 ## Desarrollo
 ```bash
 npm run dev          # http://localhost:5000
+npm run demo         # genera /test/demo.html: la interfaz con sesión simulada, sin Firebase
 npm test             # pruebas sin conexión del motor web
 npm run test:vivo    # consulta lotes reales contra los servidores
 npm run deploy       # Firebase Hosting + reglas de Firestore (proyecto baq-lote-lifecity)

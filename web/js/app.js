@@ -129,7 +129,7 @@ function alCambiarUsuario(u) {
 // ============================================================ búsqueda
 const PISTAS = {
   ref: {
-    placeholder: "Número predial nacional (30 dígitos)",
+    placeholder: "Número predial (30 dígitos)",
     html: 'Ej.: <button type="button" class="chip" data-ejemplo="080010105000000040001000000000">0800101050000000400010…</button> También acepta el número anterior (20 dígitos) o uno parcial.',
   },
   dir: {

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "python -m http.server 5000 --directory web",
+    "demo": "node web/test/demo.mjs",
     "test": "node --test web/test/offline.test.mjs",
     "test:vivo": "node web/test/en-vivo.mjs",
     "deploy": "firebase deploy --only hosting,firestore:rules"

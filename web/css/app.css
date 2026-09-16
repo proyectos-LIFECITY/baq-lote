@@ -250,6 +250,8 @@ input, textarea { font: inherit; color: inherit; }
 .sw-cons { background: rgba(90, 90, 90, .35); border: 1px dashed #555; }
 .sw-guardado { width: 10px; height: 10px; border-radius: 50%; background: #c2621f; border: 2px solid #fff; box-shadow: 0 0 0 1px #c2621f; }
 .leaflet-container { font-family: var(--fuente); }
+.base-osm { filter: saturate(.55) contrast(.96) brightness(1.03); }
+@media (prefers-color-scheme: dark) { .base-osm { filter: invert(.9) hue-rotate(180deg) saturate(.4) brightness(.9); } }
 .leaflet-control-zoom { border: 0 !important; box-shadow: var(--sombra-2) !important; border-radius: 10px !important; overflow: hidden; }
 .leaflet-control-zoom a { background: var(--superficie) !important; color: var(--tinta) !important; border-color: var(--linea) !important; }
 .leaflet-popup-content-wrapper { border-radius: 12px; box-shadow: var(--sombra-2); background: var(--superficie); color: var(--tinta); }
@@ -259,6 +261,7 @@ input, textarea { font: inherit; color: inherit; }
 .popup-lote .btn { height: 32px; margin-top: 8px; width: 100%; font-size: 13px; }
 .marcador-guardado { width: 14px; height: 14px; border-radius: 50%; background: #c2621f; border: 2.5px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.4); }
 .cursor-mapa .leaflet-container { cursor: crosshair; }
+.en-satelite .capa-predios { filter: invert(1) brightness(1.6); opacity: .9 !important; }
 
 /* ---------- diálogos y toasts ---------- */
 .dialogo { border: 0; border-radius: 16px; padding: 22px; width: min(440px, calc(100vw - 32px)); background: var(--superficie); color: var(--tinta); box-shadow: var(--sombra-2); }
@@ -287,5 +290,7 @@ input, textarea { font: inherit; color: inherit; }
   .leyenda { display: none !important; }
   .mapa-controles { top: 10px; right: 10px; }
   .kpis { grid-template-columns: 1fr 1fr; }
+  .leaflet-control-zoom { display: none; }
+  .interruptor-mapa { font-size: 12px; padding: 5px 10px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

@@ -24,7 +24,7 @@ const CapaDinamica = window.L.Layer.extend({
     const sw = window.L.CRS.EPSG3857.project(b.getSouthWest()), ne = window.L.CRS.EPSG3857.project(b.getNorthEast());
     const src = `${this.url}/export?bbox=${sw.x},${sw.y},${ne.x},${ne.y}&bboxSR=3857&imageSR=3857` +
       `&size=${t.x},${t.y}&layers=show:${this.options.capas}&transparent=true&format=png32&dpi=96&f=image`;
-    const img = window.L.imageOverlay(src, b, { opacity: this.options.opacity, interactive: false, zIndex: 250 });
+    const img = window.L.imageOverlay(src, b, { opacity: this.options.opacity, interactive: false, zIndex: 250, className: "capa-predios" });
     img.once("load", () => { if (this._img && this._img !== img) m.removeLayer(this._img); this._img = img; });
     img.once("error", () => m.removeLayer(img));
     img.addTo(m);
@@ -37,9 +37,9 @@ export class Mapa {
     this.m = Lf.map(id, { zoomControl: false, attributionControl: true, maxZoom: 21 }).setView(CENTRO_BAQ, 13);
     Lf.control.zoom({ position: "bottomright" }).addTo(this.m);
     this.bases = {
-      mapa: Lf.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        maxZoom: 21, maxNativeZoom: 20, subdomains: "abcd",
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      mapa: Lf.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 21, maxNativeZoom: 19, className: "base-osm",
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }),
       satelite: Lf.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
         maxZoom: 21, maxNativeZoom: 19, attribution: "Imágenes &copy; Esri, Maxar, Earthstar Geographics",
@@ -55,6 +55,7 @@ export class Mapa {
   }
 
   base(nombre) {
+    this.m.getContainer().classList.toggle("en-satelite", nombre === "satelite");
     for (const [k, capa] of Object.entries(this.bases)) {
       if (k === nombre) capa.addTo(this.m); else this.m.removeLayer(capa);
     }
