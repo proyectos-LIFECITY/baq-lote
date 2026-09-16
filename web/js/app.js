@@ -486,6 +486,8 @@ function iniciarApp() {
 async function arrancar() {
   document.documentElement.dataset.version = VERSION;
   iniciarIngreso();
+  // Enlaces desde la landing: /app?registro=1 abre directamente "Crear cuenta"
+  if (new URLSearchParams(location.search).has("registro")) alternarRegistro(true);
   try { await cargarNorma(); } catch (e) { toast(e.message, "error"); }
   nube.alCambiarUsuario(alCambiarUsuario);
 }

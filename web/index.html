@@ -3,201 +3,333 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>BAQ Lote · Life City</title>
-  <meta name="description" content="Análisis catastral y normativo de lotes en Barranquilla: densidad, altura, plano DXF e informe.">
+  <title>BAQ Lote · Norma de cualquier lote en Barranquilla en segundos | Life City</title>
+  <meta name="description" content="Escribe la referencia catastral o la dirección y obtén tratamiento urbanístico, viviendas y pisos permitidos, plano DXF para Revit e informe. Gratis, para lotes de Barranquilla.">
   <meta name="theme-color" content="#14573a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BAQ Lote · Norma de cualquier lote en Barranquilla en segundos">
+  <meta property="og:description" content="Tratamiento, densidad, altura, plano DXF e informe de cualquier lote de Barranquilla. Deja el geovisor, el decreto y la calculadora.">
+  <meta property="og:url" content="https://baq-lote-lifecity.web.app/">
+  <link rel="canonical" href="https://baq-lote-lifecity.web.app/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
-  <!-- ============================== Ingreso ============================== -->
-  <section id="ingreso" class="ingreso" hidden>
-    <div class="ingreso-arte" aria-hidden="true">
-      <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <pattern id="cuadricula" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-opacity=".08"/>
-          </pattern>
-        </defs>
-        <rect width="600" height="600" fill="url(#cuadricula)"/>
-        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-opacity=".35">
-          <path d="M80 120 L250 90 L280 260 L110 290Z"/><path d="M290 80 L470 50 L500 210 L320 245Z"/>
-          <path d="M120 310 L290 280 L320 450 L150 480Z"/><path d="M330 265 L510 230 L540 400 L360 435Z"/>
-          <path d="M160 500 L330 470 L345 560 L175 590Z"/>
-        </g>
-        <path d="M330 265 L510 230 L540 400 L360 435Z" fill="#5cc28d" fill-opacity=".22" stroke="#8fe0b5" stroke-width="2.5"/>
-        <g fill="#8fe0b5" font-family="Space Grotesk, sans-serif" font-size="14">
-          <text x="405" y="238">48.08</text><text x="538" y="320">31.20</text>
-        </g>
-      </svg>
-      <div class="ingreso-lema">
-        <span class="marca-chip">Life City · BIM Management Hub</span>
-        <h1>Norma de cualquier lote de Barranquilla, en segundos.</h1>
-        <p>Catastro, tratamiento urbanístico, densidad y altura, con plano DXF para Revit e informe listo para compartir.</p>
-        <ul class="lema-lista">
-          <li>Busca por referencia catastral, dirección o en el mapa</li>
-          <li>Cruza todas las capas de Panorama Urbano</li>
-          <li>Guarda tus consultas y retómalas desde cualquier equipo</li>
-        </ul>
+  <header class="nav" id="nav">
+    <div class="contenedor nav-in">
+      <a class="marca" href="/"><span class="marca-logo" aria-hidden="true"></span><span>BAQ <b>Lote</b></span></a>
+      <nav class="nav-enlaces" aria-label="Secciones">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#comparativa">Comparativa</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="nav-acciones">
+        <a class="btn btn-texto" href="/app">Ingresar</a>
+        <a class="btn btn-primario" href="/app?registro=1">Crear cuenta gratis</a>
       </div>
     </div>
-    <div class="ingreso-panel">
-      <div class="ingreso-caja">
-        <div class="marca"><span class="marca-logo" aria-hidden="true"></span><span>BAQ <b>Lote</b></span></div>
-        <h2 id="ingreso-titulo">Ingresa a tu cuenta</h2>
-        <p class="sutil" id="ingreso-sub">Tus consultas quedan guardadas en tu cuenta.</p>
-        <button class="btn btn-google" id="btn-google" type="button">
-          <svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>
-          Continuar con Google
-        </button>
-        <div class="separador"><span>o con tu correo</span></div>
-        <form id="form-ingreso" novalidate>
-          <label class="campo" id="campo-nombre" hidden><span>Nombre</span>
-            <input name="nombre" autocomplete="name" placeholder="Tu nombre"></label>
-          <label class="campo"><span>Correo</span>
-            <input name="correo" type="email" autocomplete="email" placeholder="nombre@empresa.com" required></label>
-          <label class="campo"><span>Contraseña</span>
-            <input name="clave" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres" required minlength="6"></label>
-          <p class="error" id="ingreso-error" role="alert" hidden></p>
-          <button class="btn btn-primario btn-bloque" id="btn-ingresar" type="submit">Ingresar</button>
-        </form>
-        <div class="ingreso-pie">
-          <button class="enlace" id="btn-alternar" type="button">¿No tienes cuenta? <b>Crear cuenta</b></button>
-          <button class="enlace" id="btn-recuperar" type="button">Olvidé mi contraseña</button>
+  </header>
+
+  <main>
+    <!-- ================================================================ HERO -->
+    <section class="hero">
+      <div class="hero-fondo" aria-hidden="true"></div>
+      <div class="contenedor hero-in">
+        <div class="hero-texto">
+          <span class="insignia"><span class="punto"></span>Para lotes de Barranquilla · Gratis</span>
+          <h1>¿Cuánto puedes construir en ese lote? <em>Respuesta en segundos,</em> no en días.</h1>
+          <p class="hero-sub">Escribe la referencia catastral o la dirección. BAQ Lote cruza el catastro con las capas del
+            POT y te entrega el tratamiento urbanístico, las <b>viviendas y pisos permitidos</b>, el <b>plano DXF listo para Revit</b>
+            y un informe para enviar al cliente.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primario btn-grande" href="/app?registro=1">Analizar mi primer lote
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-contorno btn-grande" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <ul class="hero-garantias">
+            <li>Sin tarjeta de crédito</li><li>Entra con Google en un clic</li><li>Tus consultas quedan guardadas</li>
+          </ul>
+        </div>
+
+        <div class="hero-demo" aria-label="Ejemplo de resultado de BAQ Lote">
+          <div class="ventana">
+            <div class="ventana-barra"><i></i><i></i><i></i><span>baq-lote-lifecity.web.app/app</span></div>
+            <div class="ventana-cuerpo">
+              <div class="demo-panel">
+                <div class="demo-busqueda"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                  <span class="escribiendo">Calle 30 # 13C-19</span><b>Analizar</b></div>
+                <div class="demo-titulo">Calle 30 13 C 19<small>080010105000000040001000000000</small></div>
+                <div class="demo-norma">
+                  <span>Tratamiento principal · cubre 100%</span>
+                  <b>Consolidación · Nivel 2</b>
+                  <div class="demo-cifras">
+                    <div><small>Viviendas máx.</small><strong data-contar="150">150</strong></div>
+                    <div><small>Altura máx.</small><strong data-contar="8">8</strong><em>pisos</em></div>
+                  </div>
+                </div>
+                <div class="demo-kpis"><div><small>Área catastral</small>3.000 m²</div><div><small>Perímetro</small>235 m</div></div>
+                <div class="demo-descargas"><span>DXF</span><span>Informe</span><span>CSV</span><span>GeoJSON</span></div>
+              </div>
+              <div class="demo-mapa">
+                <svg viewBox="0 0 320 300" role="img" aria-label="Plano del lote con cotas">
+                  <defs><pattern id="lotes" width="34" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(-16)">
+                    <rect width="34" height="26" fill="none" stroke="currentColor" stroke-opacity=".13"/></pattern></defs>
+                  <rect width="320" height="300" fill="url(#lotes)"/>
+                  <path d="M0 196 L320 104" stroke="currentColor" stroke-opacity=".12" stroke-width="18"/>
+                  <g class="dibujo">
+                    <path class="dem-lote" d="M58 118 L238 66 L268 170 L88 222 Z"/>
+                    <path class="dem-cons" d="M104 128 L184 105 L200 160 L120 183 Z"/>
+                    <path class="dem-cons" d="M72 136 L92 130 L110 196 L90 202 Z"/>
+                  </g>
+                  <g class="dem-cotas"><text x="140" y="84" transform="rotate(-16 140 84)">48,08</text>
+                    <text x="266" y="116" transform="rotate(74 266 116)">27,90</text>
+                    <text x="176" y="214" transform="rotate(-16 176 214)">44,37</text></g>
+                  <g class="dem-norte" transform="translate(292 30)"><path d="M0 -12 L6 7 L0 3 L-6 7Z"/><text y="20">N</text></g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flotante flotante-a"><span class="ic">DXF</span><div><b>lote.dxf</b><small>MAGNA-SIRGAS 9377 · listo para vincular</small></div></div>
+          <div class="flotante flotante-b"><span class="ic ic-ok">✓</span><div><b>Guardada en tu cuenta</b><small>Disponible desde cualquier equipo</small></div></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================== App ============================== -->
-  <div id="app" class="app" hidden>
-    <header class="barra">
-      <div class="marca"><span class="marca-logo" aria-hidden="true"></span><span>BAQ <b>Lote</b></span>
-        <span class="marca-sub">Análisis normativo de lotes · Barranquilla</span></div>
-      <div class="usuario">
-        <button class="usuario-btn" id="btn-usuario" aria-haspopup="menu" aria-expanded="false">
-          <span class="avatar" id="avatar"></span><span class="usuario-nombre" id="usuario-nombre"></span>
-          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-        </button>
-        <div class="menu" id="menu-usuario" role="menu" hidden>
-          <div class="menu-cab"><b id="menu-nombre"></b><span id="menu-correo"></span></div>
-          <button role="menuitem" id="btn-salir">Cerrar sesión</button>
-        </div>
+    <!-- ================================================================ CIFRAS -->
+    <section class="cifras">
+      <div class="contenedor cifras-in">
+        <div><b>~15 s</b><span>por lote, de la búsqueda al informe</span></div>
+        <div><b>3</b><span>formas de buscar: referencia, dirección o mapa</span></div>
+        <div><b>5</b><span>entregables: DXF, DXF local, informe, CSV y GeoJSON</span></div>
+        <div><b>$0</b><span>para empezar, sin tarjeta</span></div>
       </div>
-    </header>
+    </section>
 
-    <main class="cuerpo">
-      <aside class="panel" id="panel">
-        <nav class="pestanas" role="tablist">
-          <button role="tab" class="pestana activa" data-vista="consulta" aria-selected="true">Nueva consulta</button>
-          <button role="tab" class="pestana" data-vista="historial" aria-selected="false">Mis consultas <span class="contador" id="contador">0</span></button>
-        </nav>
-
-        <!-- ---------------- Nueva consulta ---------------- -->
-        <section class="vista" id="vista-consulta">
-          <form class="buscador" id="form-busqueda">
-            <div class="segmentado" role="radiogroup" aria-label="Tipo de búsqueda">
-              <button type="button" class="seg activo" data-tipo="ref" role="radio" aria-checked="true">Referencia</button>
-              <button type="button" class="seg" data-tipo="dir" role="radio" aria-checked="false">Dirección</button>
-              <button type="button" class="seg" data-tipo="mapa" role="radio" aria-checked="false">Mapa</button>
-            </div>
-            <div class="entrada" id="entrada-texto">
-              <svg class="entrada-icono" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <input id="q" autocomplete="off" spellcheck="false" placeholder="Número predial (30 dígitos)">
-              <button class="btn btn-primario" id="btn-buscar" type="submit">Analizar</button>
-            </div>
-            <p class="pista" id="pista">Ej.: <button type="button" class="chip" data-ejemplo="080010105000000040001000000000">0800101050000000400010…</button> También acepta el número anterior de 20 dígitos.</p>
-            <div class="aviso-mapa" id="aviso-mapa" hidden>
-              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg>
-              <span>Haz clic sobre un lote en el mapa. Acércate para ver los linderos catastrales.</span>
-            </div>
-            <label class="interruptor"><input type="checkbox" id="chk-capas" checked><span></span>Cruzar capas normativas de Panorama Urbano</label>
-          </form>
-
-          <div class="progreso" id="progreso" hidden>
-            <ol class="pasos" id="pasos">
-              <li data-paso="1">Catastro</li><li data-paso="2">Predio</li><li data-paso="3">Capas</li><li data-paso="4">Norma</li>
+    <!-- ================================================================ PROBLEMA -->
+    <section class="seccion" id="problema">
+      <div class="contenedor">
+        <div class="encabezado">
+          <span class="antetitulo">El problema</span>
+          <h2>Consultar la norma de un lote hoy es una tarde perdida</h2>
+          <p>La información es pública, pero está repartida en varias fuentes que no se hablan entre sí. Cada lote que evalúas repite el mismo trabajo manual.</p>
+        </div>
+        <div class="antes-despues">
+          <div class="columna antes">
+            <h3><span class="etiqueta etiqueta-gris">Así se hace hoy</span></h3>
+            <ol class="pasos-lista">
+              <li><b>Buscar el predio</b> en el geovisor y activar capa por capa.</li>
+              <li><b>Anotar tratamiento y nivel</b> e ir al decreto del POT a buscar la tabla.</li>
+              <li><b>Calcular a mano</b> densidad × área y redondear viviendas.</li>
+              <li><b>Redibujar el lote</b> en CAD para poder llevarlo a Revit.</li>
+              <li><b>Armar el informe</b> para el cliente en Word o Excel.</li>
             </ol>
-            <div class="barra-progreso"><span id="barra-progreso"></span></div>
-            <p class="sutil" id="texto-progreso">Buscando…</p>
+            <p class="tiempo tiempo-malo"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Horas por lote, con riesgo de error en cada paso</p>
           </div>
-
-          <div class="error-caja" id="error-busqueda" role="alert" hidden></div>
-
-          <div id="resultado" class="resultado" hidden></div>
-
-          <div class="vacio" id="vacio">
-            <div class="vacio-ilustracion" aria-hidden="true">
-              <svg viewBox="0 0 120 90"><path d="M15 25 L60 12 L72 55 L27 68Z" fill="currentColor" fill-opacity=".08" stroke="currentColor" stroke-opacity=".5" stroke-width="1.5"/><path d="M60 12 L100 4 L110 45 L72 55" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="1.5"/><circle cx="46" cy="40" r="4" fill="currentColor"/></svg>
-            </div>
-            <h3>Analiza un lote</h3>
-            <p>Busca por referencia catastral o dirección, o selecciona un lote directamente en el mapa. Obtendrás tratamiento, viviendas y pisos permitidos, plano DXF e informe.</p>
+          <div class="flecha" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="columna despues">
+            <h3><span class="etiqueta">Con BAQ Lote</span></h3>
+            <ol class="pasos-lista pasos-ok">
+              <li><b>Escribe la referencia o la dirección,</b> o haz clic en el mapa.</li>
+              <li><b>Recibe todo junto:</b> tratamiento, viviendas, pisos, capas, plano e informe.</li>
+            </ol>
+            <p class="tiempo tiempo-bueno"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Segundos por lote, con el cálculo siempre igual</p>
+            <a class="btn btn-primario" href="/app?registro=1">Probar gratis ahora</a>
           </div>
-        </section>
-
-        <!-- ---------------- Historial ---------------- -->
-        <section class="vista" id="vista-historial" hidden>
-          <div class="entrada entrada-compacta">
-            <svg class="entrada-icono" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <input id="filtro" placeholder="Filtrar por nombre, dirección o tratamiento">
-          </div>
-          <ul class="lista" id="lista"></ul>
-          <div class="vacio" id="historial-vacio" hidden>
-            <h3>Aún no tienes consultas guardadas</h3>
-            <p>Analiza un lote y pulsa <b>Guardar</b> para verlo aquí.</p>
-          </div>
-        </section>
-      </aside>
-
-      <section class="mapa-contenedor">
-        <div id="mapa" aria-label="Mapa de Barranquilla"></div>
-        <div class="mapa-controles">
-          <div class="capas-base" role="radiogroup" aria-label="Mapa base">
-            <button class="activo" data-base="mapa" role="radio" aria-checked="true">Mapa</button>
-            <button data-base="satelite" role="radio" aria-checked="false">Satélite</button>
-          </div>
-          <label class="interruptor interruptor-mapa"><input type="checkbox" id="chk-predios" checked><span></span>Linderos catastrales</label>
         </div>
-        <div class="leyenda" id="leyenda" hidden>
-          <span><i class="sw sw-lote"></i>Lote</span><span><i class="sw sw-cons"></i>Construcciones</span><span><i class="sw sw-guardado"></i>Guardados</span>
+      </div>
+    </section>
+
+    <!-- ================================================================ BENEFICIOS -->
+    <section class="seccion seccion-suave" id="beneficios">
+      <div class="contenedor">
+        <div class="encabezado">
+          <span class="antetitulo">Beneficios</span>
+          <h2>Todo lo que necesitas para decidir sobre un lote, en una sola pantalla</h2>
         </div>
-      </section>
-    </main>
-  </div>
-
-  <!-- ============================== Diálogos ============================== -->
-  <dialog id="dlg-guardar" class="dialogo">
-    <form method="dialog" id="form-guardar">
-      <h3 id="dlg-guardar-titulo">Guardar consulta</h3>
-      <label class="campo"><span>Nombre</span><input name="nombre" required maxlength="140"></label>
-      <label class="campo"><span>Notas <small>(opcional)</small></span><textarea name="notas" rows="3" maxlength="2000" placeholder="Cliente, uso previsto, observaciones…"></textarea></label>
-      <p class="error" id="guardar-error" hidden></p>
-      <div class="dialogo-acciones">
-        <button class="btn btn-fantasma" value="cancelar" formnovalidate>Cancelar</button>
-        <button class="btn btn-primario" value="ok" id="btn-confirmar-guardar">Guardar</button>
+        <div class="rejilla-beneficios">
+          <article class="beneficio destacado">
+            <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6" /></svg></div>
+            <h3>Viviendas y pisos, ya calculados</h3>
+            <p>Aplica la tabla de edificabilidad de Renovación, Mejoramiento Integral y Consolidación sobre el área catastral del predio. Escenario base y máximo, redondeados como corresponde.</p>
+          </article>
+          <article class="beneficio">
+            <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4zm0 5 9 4 9-4M3 17l9 4 9-4"/></svg></div>
+            <h3>Todas las capas del POT cruzadas</h3>
+            <p>Tratamientos, usos, planes parciales, patrimonio, amenazas, clasificación del suelo, barrio y localidad, con el porcentaje del lote que cubre cada una.</p>
+          </article>
+          <article class="beneficio">
+            <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 9h16M9 20V9"/></svg></div>
+            <h3>Plano DXF directo a Revit</h3>
+            <p>Polígono del lote, construcciones existentes y cotas en coordenadas MAGNA-SIRGAS (EPSG 9377) o locales. Vincúlalo y empieza a diseñar sin redibujar.</p>
+          </article>
+          <article class="beneficio">
+            <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6v18h12V7zM14 3v4h4M9 13h6M9 17h4"/></svg></div>
+            <h3>Informe listo para el cliente</h3>
+            <p>Ficha con plano acotado, vértices, norma, capas y datos catastrales. Ábrela, imprímela en PDF o envíala tal cual.</p>
+          </article>
+          <article class="beneficio">
+            <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div>
+            <h3>Tu historial, en la nube</h3>
+            <p>Guarda cada análisis con nombre y notas. Filtra, vuelve a abrirlo o actualízalo desde el computador de la oficina o desde el celular en obra.</p>
+          </article>
+          <article class="beneficio">
+            <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <h3>Busca como prefieras</h3>
+            <p>Número predial nacional o anterior, dirección escrita como la dices («Cra 59 # 64-221») o un clic sobre el lote en el mapa o la imagen satelital.</p>
+          </article>
+        </div>
       </div>
-    </form>
-  </dialog>
+    </section>
 
-  <dialog id="dlg-confirmar" class="dialogo">
-    <form method="dialog">
-      <h3 id="confirmar-titulo">¿Eliminar consulta?</h3>
-      <p class="sutil" id="confirmar-texto">Esta acción no se puede deshacer.</p>
-      <div class="dialogo-acciones">
-        <button class="btn btn-fantasma" value="cancelar">Cancelar</button>
-        <button class="btn btn-peligro" value="ok">Eliminar</button>
+    <!-- ================================================================ CÓMO FUNCIONA -->
+    <section class="seccion" id="como-funciona">
+      <div class="contenedor">
+        <div class="encabezado">
+          <span class="antetitulo">Cómo funciona</span>
+          <h2>De la dirección al plano en tres pasos</h2>
+        </div>
+        <ol class="tres-pasos">
+          <li>
+            <span class="numero">1</span>
+            <h3>Crea tu cuenta</h3>
+            <p>Entra con Google o con tu correo. Toma menos de un minuto y no pide tarjeta.</p>
+          </li>
+          <li>
+            <span class="numero">2</span>
+            <h3>Busca el lote</h3>
+            <p>Referencia catastral, dirección o clic en el mapa. BAQ Lote encuentra el terreno y el predio en el catastro.</p>
+          </li>
+          <li>
+            <span class="numero">3</span>
+            <h3>Decide y descarga</h3>
+            <p>Revisa viviendas y pisos, descarga el DXF y el informe, y guarda la consulta para después.</p>
+          </li>
+        </ol>
       </div>
-    </form>
-  </dialog>
+    </section>
 
-  <div class="toasts" id="toasts" aria-live="polite"></div>
-  <div class="cargando-inicial" id="cargando-inicial"><span class="marca-logo" aria-hidden="true"></span></div>
+    <!-- ================================================================ COMPARATIVA -->
+    <section class="seccion seccion-oscura" id="comparativa">
+      <div class="contenedor">
+        <div class="encabezado encabezado-claro">
+          <span class="antetitulo">Comparativa</span>
+          <h2>¿Por qué BAQ Lote y no las alternativas?</h2>
+          <p>Los geovisores muestran la información; las herramientas GIS permiten analizarla si sabes cómo. BAQ Lote hace el análisis por ti y te entrega el resultado listo para usar.</p>
+        </div>
+        <div class="tabla-envoltura">
+          <table class="comparativa">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" class="nosotros"><span class="marca-mini"><span class="marca-logo" aria-hidden="true"></span>BAQ Lote</span></th>
+                <th scope="col">Geovisor + decreto + CAD</th>
+                <th scope="col">Software GIS de escritorio</th>
+                <th scope="col">Consultoría externa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Tiempo por lote</th><td class="nosotros"><b>Segundos</b></td><td>Horas</td><td>Horas</td><td>Días</td></tr>
+              <tr><th scope="row">Viviendas y pisos calculados</th><td class="nosotros"><i class="si">Sí</i></td><td><i class="no">A mano</i></td><td><i class="no">A mano</i></td><td><i class="si">Sí</i></td></tr>
+              <tr><th scope="row">Cruce de capas con % del lote</th><td class="nosotros"><i class="si">Automático</i></td><td><i class="no">Visual</i></td><td><i class="medio">Configurándolo</i></td><td><i class="medio">Según alcance</i></td></tr>
+              <tr><th scope="row">Plano DXF para Revit</th><td class="nosotros"><i class="si">Incluido</i></td><td><i class="no">Redibujar</i></td><td><i class="medio">Exportando</i></td><td><i class="medio">Según alcance</i></td></tr>
+              <tr><th scope="row">Informe para el cliente</th><td class="nosotros"><i class="si">Incluido</i></td><td><i class="no">Armarlo</i></td><td><i class="no">Armarlo</i></td><td><i class="si">Sí</i></td></tr>
+              <tr><th scope="row">Historial de consultas</th><td class="nosotros"><i class="si">En la nube</i></td><td><i class="no">No</i></td><td><i class="medio">Archivos locales</i></td><td><i class="no">No</i></td></tr>
+              <tr><th scope="row">Conocimiento técnico requerido</th><td class="nosotros"><b>Ninguno</b></td><td>Medio</td><td>Alto</td><td>Ninguno</td></tr>
+              <tr><th scope="row">Costo</th><td class="nosotros"><b>Gratis</b></td><td>Tu tiempo</td><td>Licencia + tu tiempo</td><td>Honorarios por lote</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="centro"><a class="btn btn-claro btn-grande" href="/app?registro=1">Crear cuenta gratis</a></div>
+      </div>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script type="module" src="js/app.js"></script>
+    <!-- ================================================================ PARA QUIÉN -->
+    <section class="seccion" id="para-quien">
+      <div class="contenedor">
+        <div class="encabezado">
+          <span class="antetitulo">Para quién</span>
+          <h2>Hecho para quien evalúa lotes todas las semanas</h2>
+        </div>
+        <div class="perfiles">
+          <article><h3>Arquitectos y diseñadores</h3><p>Llega al primer esquema con el lote georreferenciado en Revit y la altura permitida clara.</p></article>
+          <article><h3>Promotores e inversionistas</h3><p>Filtra oportunidades en minutos: cuántas unidades caben antes de negociar el terreno.</p></article>
+          <article><h3>Asesores inmobiliarios</h3><p>Responde «¿qué se puede hacer aquí?» con un informe profesional en la misma llamada.</p></article>
+          <article><h3>Coordinadores BIM</h3><p>Un DXF con coordenadas reales y construcciones existentes, sin reprocesos de levantamiento inicial.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ PREGUNTAS -->
+    <section class="seccion seccion-suave" id="preguntas">
+      <div class="contenedor contenedor-estrecho">
+        <div class="encabezado">
+          <span class="antetitulo">Preguntas frecuentes</span>
+          <h2>Lo que suelen preguntarnos</h2>
+        </div>
+        <div class="faq">
+          <details open><summary>¿Cuánto cuesta?</summary>
+            <p>Nada. Creas tu cuenta gratis, sin tarjeta, y analizas los lotes que necesites.</p></details>
+          <details><summary>¿De dónde salen los datos?</summary>
+            <p>Del catastro abierto de la Alcaldía de Barranquilla (terreno, predio, direcciones y construcciones) y de las capas
+              publicadas en el geovisor Panorama Urbano (tratamientos, usos, planes parciales, amenazas y más). Se consultan en
+              el momento, así que siempre ves la información publicada más reciente.</p></details>
+          <details><summary>¿El resultado reemplaza un concepto de norma o una licencia?</summary>
+            <p>No. BAQ Lote es una herramienta de referencia para evaluar y prefactibilizar rápido. Para trámites y decisiones
+              definitivas, valida con el certificado catastral, el concepto de norma urbanística y la curaduría.</p></details>
+          <details><summary>¿Cómo calcula las viviendas y los pisos?</summary>
+            <p>Identifica el tratamiento urbanístico que cubre el lote (y qué porcentaje cubre), toma el área catastral del predio
+              y aplica la tabla de edificabilidad de Renovación, Mejoramiento Integral y Consolidación. Viviendas = densidad × área,
+              redondeadas hacia abajo. Si el lote cruza varios tratamientos, te los muestra todos.</p></details>
+          <details><summary>¿Mis consultas son privadas?</summary>
+            <p>Sí. Cada consulta se guarda en tu cuenta y solo tú puedes verla, editarla o eliminarla.</p></details>
+          <details><summary>¿El DXF sirve para Revit?</summary>
+            <p>Sí. Se entrega en metros y en MAGNA-SIRGAS Origen Nacional (EPSG 9377), con capas separadas para lote,
+              construcciones y cotas. También puedes descargarlo en coordenadas locales con origen en el centroide del lote.</p></details>
+          <details><summary>¿Funciona para otras ciudades?</summary>
+            <p>Por ahora solo para Barranquilla.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ CTA FINAL -->
+    <section class="cta-final">
+      <div class="contenedor cta-in">
+        <div>
+          <h2>Tu próximo lote, analizado antes de terminar el café.</h2>
+          <p>Crea tu cuenta gratis y consulta el primero ahora mismo.</p>
+        </div>
+        <div class="cta-botones">
+          <a class="btn btn-claro btn-grande" href="/app?registro=1">Crear cuenta gratis</a>
+          <a class="btn btn-contorno-claro btn-grande" href="/app">Ya tengo cuenta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-in">
+      <a class="marca" href="/"><span class="marca-logo" aria-hidden="true"></span><span>BAQ <b>Lote</b></span></a>
+      <p>Una herramienta de <b>Life City · BIM Management Hub</b>. Información de referencia: no reemplaza certificados
+        catastrales, conceptos de norma urbanística ni licencias.</p>
+      <nav aria-label="Pie"><a href="/app">Ingresar</a><a href="/app?registro=1">Crear cuenta</a><a href="#preguntas">Preguntas</a></nav>
+    </div>
+  </footer>
+
+  <script>
+    // Sombra de la barra al desplazarse y animaciones al aparecer
+    const nav = document.getElementById("nav");
+    addEventListener("scroll", () => nav.classList.toggle("con-sombra", scrollY > 8), { passive: true });
+    const obs = "IntersectionObserver" in window && new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); }
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".beneficio, .tres-pasos li, .perfiles article, .columna").forEach((el) => {
+      el.classList.add("revelar");
+      obs ? obs.observe(el) : el.classList.add("visible");
+    });
+  </script>
 </body>
 </html>

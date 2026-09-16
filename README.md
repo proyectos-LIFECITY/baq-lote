@@ -5,12 +5,13 @@ dirección o en el mapa, cruza las capas del geovisor **Panorama Urbano** y calc
 (viviendas) y altura (pisos)** según la tabla de edificabilidad. Entrega plano **DXF** para Revit,
 GeoJSON, CSV e informe HTML. Cada usuario guarda sus consultas en su cuenta.
 
-**App web:** https://baq-lote-lifecity.web.app
+**Sitio:** https://baq-lote-lifecity.web.app (landing) · **App:** https://baq-lote-lifecity.web.app/app
 
 ## Estructura
 | Carpeta | Contenido |
 |---|---|
-| `web/` | App web (HTML + JS sin compilación, Leaflet, Firebase Auth + Firestore). Se publica en Firebase Hosting |
+| `web/index.html` | Landing comercial (`/`). Los botones de registro llevan a `/app?registro=1` |
+| `web/app.html` | App web (`/app`): HTML + JS sin compilación, Leaflet, Firebase Auth + Firestore |
 | `web/js/motor.js` | Búsqueda del lote, cruce de capas y cálculo de norma |
 | `web/js/salidas.js` | DXF R12, GeoJSON, CSV e informe HTML |
 | `web/js/nube.js` | Inicio de sesión y consultas guardadas |
