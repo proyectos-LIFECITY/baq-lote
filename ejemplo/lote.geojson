@@ -1,0 +1,224 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "tipo": "Sector Información Estadística",
+    "npn": "080010105000000040001000000000",
+    "direccion": "Calle 30 13 C 19; Calle 30 13 C 07",
+    "area_geometrica_m2": 3001.36,
+    "numero_predial_anterior": "08001010500040001000",
+    "condicion_predio": "NPH",
+    "destinacion_economica": "Comercial",
+    "codigo_homologado": "AFT0026MLOD",
+    "numero_predial_nacional": "080010105000000040001000000000",
+    "tipo_predio": "Predio Privado",
+    "estado": "Activo",
+    "estado_fmi": "Activo",
+    "fecha_apertura_fmi": "1974-05-09",
+    "area_catastral_terreno": 3000.0,
+    "area_registral_m2": 3000.0,
+    "vigencia_actualizacion": "2026-01-01",
+    "aplica_efectos_registrales": "No",
+    "tipo_vivienda": "No Aplica",
+    "estrato": "No Aplica"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -74.78701240878549,
+       10.95140885747118
+      ],
+      [
+       -74.78712951759648,
+       10.95137346241216
+      ],
+      [
+       -74.78719921688685,
+       10.95161615004966
+      ],
+      [
+       -74.78721132416847,
+       10.951658306149657
+      ],
+      [
+       -74.78722343146524,
+       10.951700464057149
+      ],
+      [
+       -74.78718842384299,
+       10.951710996853452
+      ],
+      [
+       -74.787105280164,
+       10.951736013589915
+      ],
+      [
+       -74.78694424833405,
+       10.951784466155637
+      ],
+      [
+       -74.78652328398297,
+       10.951911128303104
+      ],
+      [
+       -74.78648227372062,
+       10.951768302233477
+      ],
+      [
+       -74.78647646262621,
+       10.951748059721915
+      ],
+      [
+       -74.78646325617123,
+       10.951702066506025
+      ],
+      [
+       -74.78642963950364,
+       10.95158499113453
+      ],
+      [
+       -74.78644047304682,
+       10.951581716337673
+      ],
+      [
+       -74.7865070209258,
+       10.951561603602588
+      ],
+      [
+       -74.78689529902493,
+       10.951444252494854
+      ],
+      [
+       -74.78701240878549,
+       10.95140885747118
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "tipo": "construccion",
+    "relacion_superficie": "En Rasante",
+    "identificador": "A",
+    "tipo_construccion": "Convencional",
+    "tipo_dominio": "Privado",
+    "total_pisos": 1,
+    "total_sotanos": 0,
+    "total_mezanines": 0,
+    "total_semisotanos": 0,
+    "altura_total_construccion": 3,
+    "local_id": "080010105000000040001000000000",
+    "estado_construccion": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -74.78718842384299,
+       10.951710996853452
+      ],
+      [
+       -74.787105280164,
+       10.951736013589915
+      ],
+      [
+       -74.78708795895434,
+       10.95167979999009
+      ],
+      [
+       -74.78710633747426,
+       10.951674269829219
+      ],
+      [
+       -74.78705464493822,
+       10.951486736371976
+      ],
+      [
+       -74.7870343423165,
+       10.951492200927834
+      ],
+      [
+       -74.78702472585778,
+       10.951457311184937
+      ],
+      [
+       -74.7870097200107,
+       10.951461350200422
+      ],
+      [
+       -74.78700491132558,
+       10.951443905331015
+      ],
+      [
+       -74.7871049847583,
+       10.95141489260602
+      ],
+      [
+       -74.78718842384299,
+       10.951710996853452
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "tipo": "construccion",
+    "relacion_superficie": "En Rasante",
+    "identificador": "A",
+    "tipo_construccion": "Convencional",
+    "tipo_dominio": "Privado",
+    "total_pisos": 1,
+    "total_sotanos": 0,
+    "total_mezanines": 0,
+    "total_semisotanos": 0,
+    "altura_total_construccion": 3,
+    "local_id": "080010105000000040001000000000",
+    "estado_construccion": 1
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -74.78667153724969,
+       10.951806062204536
+      ],
+      [
+       -74.78663720159767,
+       10.951686009423815
+      ],
+      [
+       -74.78658789985413,
+       10.951699778439993
+      ],
+      [
+       -74.78655265093835,
+       10.95157622209346
+      ],
+      [
+       -74.7869289304597,
+       10.951463212467608
+      ],
+      [
+       -74.78699861302779,
+       10.951706794675864
+      ],
+      [
+       -74.78667153724969,
+       10.951806062204536
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

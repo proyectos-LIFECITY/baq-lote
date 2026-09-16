@@ -1,0 +1,1123 @@
+{
+ "lote": {
+  "npn": "080010105000000040001000000000",
+  "direcciones": [
+   "Calle 30 13 C 19",
+   "Calle 30 13 C 07"
+  ],
+  "rings": [
+   [
+    [
+     4804796.5623,
+     2768750.242900001
+    ],
+    [
+     4804783.7429,
+     2768746.4048999995
+    ],
+    [
+     4804776.2861,
+     2768773.2854999993
+    ],
+    [
+     4804774.9908,
+     2768777.9548000004
+    ],
+    [
+     4804773.6955,
+     2768782.6242999993
+    ],
+    [
+     4804777.5276,
+     2768783.7663000003
+    ],
+    [
+     4804786.6289,
+     2768786.478700001
+    ],
+    [
+     4804804.2562,
+     2768791.7321000006
+    ],
+    [
+     4804850.3369,
+     2768805.4652999993
+    ],
+    [
+     4804854.7244,
+     2768789.6456000004
+    ],
+    [
+     4804855.3461,
+     2768787.4035
+    ],
+    [
+     4804856.759,
+     2768782.3092
+    ],
+    [
+     4804860.3555,
+     2768769.3417000007
+    ],
+    [
+     4804859.1696,
+     2768768.9866000004
+    ],
+    [
+     4804851.8849,
+     2768766.8057000004
+    ],
+    [
+     4804809.3818,
+     2768754.0809000004
+    ],
+    [
+     4804796.5623,
+     2768750.242900001
+    ]
+   ]
+  ],
+  "rings_wgs84": [
+   [
+    [
+     -74.78701240878549,
+     10.95140885747118
+    ],
+    [
+     -74.78712951759648,
+     10.95137346241216
+    ],
+    [
+     -74.78719921688685,
+     10.95161615004966
+    ],
+    [
+     -74.78721132416847,
+     10.951658306149657
+    ],
+    [
+     -74.78722343146524,
+     10.951700464057149
+    ],
+    [
+     -74.78718842384299,
+     10.951710996853452
+    ],
+    [
+     -74.787105280164,
+     10.951736013589915
+    ],
+    [
+     -74.78694424833405,
+     10.951784466155637
+    ],
+    [
+     -74.78652328398297,
+     10.951911128303104
+    ],
+    [
+     -74.78648227372062,
+     10.951768302233477
+    ],
+    [
+     -74.78647646262621,
+     10.951748059721915
+    ],
+    [
+     -74.78646325617123,
+     10.951702066506025
+    ],
+    [
+     -74.78642963950364,
+     10.95158499113453
+    ],
+    [
+     -74.78644047304682,
+     10.951581716337673
+    ],
+    [
+     -74.7865070209258,
+     10.951561603602588
+    ],
+    [
+     -74.78689529902493,
+     10.951444252494854
+    ],
+    [
+     -74.78701240878549,
+     10.95140885747118
+    ]
+   ]
+  ],
+  "area": 3001.35546875,
+  "perimetro": 235.01933096586396,
+  "area_oficial": 3000.0,
+  "cx": 4804816.227777293,
+  "cy": 2768775.500004555,
+  "terreno_attrs": [
+   {
+    "campo": "name",
+    "alias": "Name",
+    "valor": "080010105000000040001000000000"
+   },
+   {
+    "campo": "relacion_superficie",
+    "alias": "Relación Superficie",
+    "valor": "En Rasante"
+   },
+   {
+    "campo": "estado_terreno",
+    "alias": "Estado Terreno",
+    "valor": 1
+   }
+  ],
+  "predio_attrs": [
+   {
+    "campo": "numero_predial_anterior",
+    "alias": "Numero Predial Anterior",
+    "valor": "08001010500040001000"
+   },
+   {
+    "campo": "condicion_predio",
+    "alias": "Condición Predio",
+    "valor": "NPH"
+   },
+   {
+    "campo": "destinacion_economica",
+    "alias": "Destinación Económica",
+    "valor": "Comercial"
+   },
+   {
+    "campo": "codigo_homologado",
+    "alias": "Código Homologado",
+    "valor": "AFT0026MLOD"
+   },
+   {
+    "campo": "numero_predial_nacional",
+    "alias": "Número Predial Nacional",
+    "valor": "080010105000000040001000000000"
+   },
+   {
+    "campo": "tipo_predio",
+    "alias": "Tipo Predio",
+    "valor": "Predio Privado"
+   },
+   {
+    "campo": "estado",
+    "alias": "Estado",
+    "valor": "Activo"
+   },
+   {
+    "campo": "estado_fmi",
+    "alias": "Estado FMI",
+    "valor": "Activo"
+   },
+   {
+    "campo": "fecha_apertura_fmi",
+    "alias": "Fecha Apertura FMI",
+    "valor": "1974-05-09"
+   },
+   {
+    "campo": "area_catastral_terreno",
+    "alias": "Área Catastral Terreno",
+    "valor": 3000.0
+   },
+   {
+    "campo": "area_registral_m2",
+    "alias": "Área Registral M2",
+    "valor": 3000.0
+   },
+   {
+    "campo": "vigencia_actualizacion",
+    "alias": "Vigencia Actualización Catastral",
+    "valor": "2026-01-01"
+   },
+   {
+    "campo": "tipo",
+    "alias": "Tipo",
+    "valor": "Sector Información Estadística"
+   },
+   {
+    "campo": "aplica_efectos_registrales",
+    "alias": "¿Aplica Efectos Registrales?",
+    "valor": "No"
+   },
+   {
+    "campo": "tipo_vivienda",
+    "alias": "Tipo de Vivienda",
+    "valor": "No Aplica"
+   },
+   {
+    "campo": "estrato",
+    "alias": "Estrato",
+    "valor": "No Aplica"
+   }
+  ],
+  "construcciones": [
+   {
+    "objectid": 91445,
+    "rings": [
+     [
+      [
+       4804777.5276,
+       2768783.7663000003
+      ],
+      [
+       4804786.6289,
+       2768786.478700001
+      ],
+      [
+       4804788.4847,
+       2768780.251599999
+      ],
+      [
+       4804786.4729,
+       2768779.6520000007
+      ],
+      [
+       4804791.9983,
+       2768758.8817999996
+      ],
+      [
+       4804794.2203,
+       2768759.4728999995
+      ],
+      [
+       4804795.2482,
+       2768755.6086999997
+      ],
+      [
+       4804796.8905,
+       2768756.045600001
+      ],
+      [
+       4804797.4045,
+       2768754.113500001
+      ],
+      [
+       4804786.4507,
+       2768750.9702000003
+      ],
+      [
+       4804777.5276,
+       2768783.7663000003
+      ]
+     ]
+    ],
+    "area": 285.2841796875,
+    "pisos": 1,
+    "atributos": [
+     {
+      "campo": "relacion_superficie",
+      "alias": "Relación Superficie",
+      "valor": "En Rasante"
+     },
+     {
+      "campo": "identificador",
+      "alias": "Identificador",
+      "valor": "A"
+     },
+     {
+      "campo": "tipo_construccion",
+      "alias": "Tipo Construcción",
+      "valor": "Convencional"
+     },
+     {
+      "campo": "tipo_dominio",
+      "alias": "Tipo Dominio",
+      "valor": "Privado"
+     },
+     {
+      "campo": "total_pisos",
+      "alias": "Total Pisos",
+      "valor": 1
+     },
+     {
+      "campo": "total_sotanos",
+      "alias": "Total Sotanos",
+      "valor": 0
+     },
+     {
+      "campo": "total_mezanines",
+      "alias": "Total Mezanines",
+      "valor": 0
+     },
+     {
+      "campo": "total_semisotanos",
+      "alias": "Total Semisotanos",
+      "valor": 0
+     },
+     {
+      "campo": "altura_total_construccion",
+      "alias": "Altura Total Construcción",
+      "valor": 3
+     },
+     {
+      "campo": "local_id",
+      "alias": "Local Id",
+      "valor": "080010105000000040001000000000"
+     },
+     {
+      "campo": "estado_construccion",
+      "alias": "Estado Construcción",
+      "valor": 1
+     }
+    ],
+    "rings_wgs84": [
+     [
+      [
+       -74.78718842384299,
+       10.951710996853452
+      ],
+      [
+       -74.787105280164,
+       10.951736013589915
+      ],
+      [
+       -74.78708795895434,
+       10.95167979999009
+      ],
+      [
+       -74.78710633747426,
+       10.951674269829219
+      ],
+      [
+       -74.78705464493822,
+       10.951486736371976
+      ],
+      [
+       -74.7870343423165,
+       10.951492200927834
+      ],
+      [
+       -74.78702472585778,
+       10.951457311184937
+      ],
+      [
+       -74.7870097200107,
+       10.951461350200422
+      ],
+      [
+       -74.78700491132558,
+       10.951443905331015
+      ],
+      [
+       -74.7871049847583,
+       10.95141489260602
+      ],
+      [
+       -74.78718842384299,
+       10.951710996853452
+      ]
+     ]
+    ]
+   },
+   {
+    "objectid": 91446,
+    "rings": [
+     [
+      [
+       4804834.0688,
+       2768793.943499999
+      ],
+      [
+       4804837.7419,
+       2768780.646299999
+      ],
+      [
+       4804843.138,
+       2768782.1369000003
+      ],
+      [
+       4804846.9086,
+       2768768.4517
+      ],
+      [
+       4804805.7194,
+       2768756.1992000006
+      ],
+      [
+       4804798.265,
+       2768783.1787
+      ],
+      [
+       4804834.0688,
+       2768793.943499999
+      ]
+     ]
+    ],
+    "area": 1127.9443359375,
+    "pisos": 1,
+    "atributos": [
+     {
+      "campo": "relacion_superficie",
+      "alias": "Relación Superficie",
+      "valor": "En Rasante"
+     },
+     {
+      "campo": "identificador",
+      "alias": "Identificador",
+      "valor": "A"
+     },
+     {
+      "campo": "tipo_construccion",
+      "alias": "Tipo Construcción",
+      "valor": "Convencional"
+     },
+     {
+      "campo": "tipo_dominio",
+      "alias": "Tipo Dominio",
+      "valor": "Privado"
+     },
+     {
+      "campo": "total_pisos",
+      "alias": "Total Pisos",
+      "valor": 1
+     },
+     {
+      "campo": "total_sotanos",
+      "alias": "Total Sotanos",
+      "valor": 0
+     },
+     {
+      "campo": "total_mezanines",
+      "alias": "Total Mezanines",
+      "valor": 0
+     },
+     {
+      "campo": "total_semisotanos",
+      "alias": "Total Semisotanos",
+      "valor": 0
+     },
+     {
+      "campo": "altura_total_construccion",
+      "alias": "Altura Total Construcción",
+      "valor": 3
+     },
+     {
+      "campo": "local_id",
+      "alias": "Local Id",
+      "valor": "080010105000000040001000000000"
+     },
+     {
+      "campo": "estado_construccion",
+      "alias": "Estado Construcción",
+      "valor": 1
+     }
+    ],
+    "rings_wgs84": [
+     [
+      [
+       -74.78667153724969,
+       10.951806062204536
+      ],
+      [
+       -74.78663720159767,
+       10.951686009423815
+      ],
+      [
+       -74.78658789985413,
+       10.951699778439993
+      ],
+      [
+       -74.78655265093835,
+       10.95157622209346
+      ],
+      [
+       -74.7869289304597,
+       10.951463212467608
+      ],
+      [
+       -74.78699861302779,
+       10.951706794675864
+      ],
+      [
+       -74.78667153724969,
+       10.951806062204536
+      ]
+     ]
+    ]
+   }
+  ],
+  "manzana": {
+   "codigo": "08001010500000004",
+   "nombre": "0"
+  },
+  "n_predios": 1
+ },
+ "norma": [
+  {
+   "tratamiento": "CONSOLIDACION",
+   "nivel": "2",
+   "area_m2": 3000.0,
+   "base": {
+    "rango": "Entre 801 y 4000 m²",
+    "densidad_viv_m2": 0.02,
+    "altura_pisos": 2,
+    "viviendas_calculadas": 60.0,
+    "viviendas_max": 60
+   },
+   "maxima": {
+    "rango": "Entre 801 y 4000 m²",
+    "densidad_viv_m2": 0.05,
+    "altura_pisos": 8,
+    "viviendas_calculadas": 150.0,
+    "viviendas_max": 150
+   },
+   "fuente": "TRATAMIENTOS URBANISTICOS _ Tipo",
+   "fraccion": 1.0,
+   "altura_capa": "11",
+   "etiqueta": "Consolidacion Nivel 2",
+   "principal": true
+  }
+ ],
+ "cruces": [
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Amenaza por Remocion en Masa",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Remoción2024/FeatureServer/0",
+   "nombre": "Remoción2024",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "NOMBRE",
+       "alias": "NOMBRE",
+       "valor": "SURORIENTE"
+      },
+      {
+       "campo": "Nivel_Amenaza",
+       "alias": "Nivel_Amenaza",
+       "valor": "Baja"
+      },
+      {
+       "campo": "Fuente",
+       "alias": "Fuente",
+       "valor": "Decreto 212 de 2014"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Amenaza por Remoción en masa",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/completa_AMENAZA_POR_REMOCION_ESTUDIO_2024/FeatureServer/0",
+   "nombre": "completa AMENAZA POR REMOCION ESTUDIO 2024",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "Amenaza",
+       "alias": "Amenaza",
+       "valor": "Baja"
+      },
+      {
+       "campo": "zona",
+       "alias": "Fuente",
+       "valor": "Decreto 212 de 2014"
+      },
+      {
+       "campo": "AREA_M2",
+       "alias": "AREA_M2",
+       "valor": 12595373.47
+      },
+      {
+       "campo": "NOMBRE",
+       "alias": "NOMBRE",
+       "valor": "SURORIENTE"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "TRATAMIENTOS URBANISTICOS _ Tipo",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/TRATAMIENTOS_URBANISTICOS___Tipo/FeatureServer/0",
+   "nombre": "TRATAMIENTOS URBANISTICOS - Tipo",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "ALTURA_MAX",
+       "alias": "ALTURA_MAX",
+       "valor": "11"
+      },
+      {
+       "campo": "AREA_HAS",
+       "alias": "AREA_HAS",
+       "valor": 244.426
+      },
+      {
+       "campo": "ID_EDIFABI",
+       "alias": "ID_EDIFABI",
+       "valor": 197
+      },
+      {
+       "campo": "obser",
+       "alias": "obser",
+       "valor": "x"
+      },
+      {
+       "campo": "Codigo_Tratamiento",
+       "alias": "Codigo_Tratamiento",
+       "valor": "CSD"
+      },
+      {
+       "campo": "Trat_urbanistico",
+       "alias": "Trat_urbanistico",
+       "valor": "Consolidacion"
+      },
+      {
+       "campo": "Tipo_TratUrb",
+       "alias": "Tipo_TratUrb",
+       "valor": "Nivel 2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "ACTIVIDAD USOS URBANOS _ Tipo Poligono",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/ACTIVIDAD_USOS_URBANOS___Tipo_Poligono/FeatureServer/0",
+   "nombre": "ACTIVIDAD USOS URBANOS_Actividades ",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "area_has",
+       "alias": "AREA_HAS",
+       "valor": 78.602
+      },
+      {
+       "campo": "actividad",
+       "alias": "Actividad",
+       "valor": "ACTIVIDAD INDUSTRIAL"
+      },
+      {
+       "campo": "poligtipo",
+       "alias": "PoligTipo",
+       "valor": "P-IND-2"
+      },
+      {
+       "campo": "nombre_uso",
+       "alias": "Nombre_Uso",
+       "valor": "POLIGONO INDUSTRIAL - TIPO 2"
+      },
+      {
+       "campo": "simb_activ_",
+       "alias": "Simb_Activ_",
+       "valor": "IND"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "ACTIVIDAD USOS URBANOS _ Actividades",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/ACTIVIDAD_USOS_URBANOS___Actividades/FeatureServer/0",
+   "nombre": "ACTIVIDAD_USOS_URBANOS_Actividad",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "area_has",
+       "alias": "area_has",
+       "valor": 78.602
+      },
+      {
+       "campo": "actividad",
+       "alias": "Actividad",
+       "valor": "ACTIVIDAD INDUSTRIAL"
+      },
+      {
+       "campo": "poligtipo",
+       "alias": "poligtipo",
+       "valor": "P-IND-2"
+      },
+      {
+       "campo": "nombre_uso",
+       "alias": "nombre_uso",
+       "valor": "POLIGONO INDUSTRIAL - TIPO 2"
+      },
+      {
+       "campo": "simb_activ_",
+       "alias": "simb_activ_",
+       "valor": "IND"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "TRATAMIENTOS URBANISTICOS",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/TRATAMIENTOS_URBANISTICOS_2024/FeatureServer/0",
+   "nombre": "TRATAMIENTOS URBANISTICOS",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "ALTURA_MAX",
+       "alias": "ALTURA_MAX",
+       "valor": "11"
+      },
+      {
+       "campo": "AREA_HAS",
+       "alias": "AREA_HAS",
+       "valor": 244.426
+      },
+      {
+       "campo": "ID_EDIFABI",
+       "alias": "ID_EDIFABI",
+       "valor": 197
+      },
+      {
+       "campo": "obser",
+       "alias": "obser",
+       "valor": "x"
+      },
+      {
+       "campo": "Codigo_Tratamiento",
+       "alias": "Codigo_Tratamiento",
+       "valor": "CSD"
+      },
+      {
+       "campo": "Trat_urbanistico",
+       "alias": "Trat_urbanistico",
+       "valor": "Consolidacion"
+      },
+      {
+       "campo": "Tipo_TratUrb",
+       "alias": "Tipo_TratUrb",
+       "valor": "Nivel 2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "POT General 2014 G4",
+   "titulo": "CLASIFICACIÓN DEL SUELO - Tipo",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/CLASIFICACIÓN_DEL_SUELO/FeatureServer/0",
+   "nombre": "CLASIFICACIÓN_DEL_SUELO",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "id",
+       "alias": "id",
+       "valor": 0
+      },
+      {
+       "campo": "area_m2",
+       "alias": "area_m2",
+       "valor": 93862328.63
+      },
+      {
+       "campo": "area_km2",
+       "alias": "area_km2",
+       "valor": 93.86
+      },
+      {
+       "campo": "clasificac",
+       "alias": "clasificac",
+       "valor": "SUELO URBANO"
+      },
+      {
+       "campo": "st_perimet",
+       "alias": "st_perimet",
+       "valor": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "Piezas Urbanas",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Piezas_URBANAS/FeatureServer/0",
+   "nombre": "Piezas_URBANAS",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "Id",
+       "alias": "Id",
+       "valor": 8
+      },
+      {
+       "campo": "NOMBRE",
+       "alias": "NOMBRE",
+       "valor": "SURORIENTAL"
+      },
+      {
+       "campo": "LOCALIDAD",
+       "alias": "LOCALIDAD",
+       "valor": "Suroriente"
+      },
+      {
+       "campo": "AREA_HAS",
+       "alias": "AREA_HAS",
+       "valor": 1155.48
+      },
+      {
+       "campo": "AREA_M2",
+       "alias": "AREA_M2",
+       "valor": 11554790.54
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "LIM_Barrio",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/LIM_Barrio/FeatureServer/0",
+   "nombre": "LIM_Barrio",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "id",
+       "alias": "id",
+       "valor": 0
+      },
+      {
+       "campo": "localidad",
+       "alias": "localidad",
+       "valor": "SURORIENTE"
+      },
+      {
+       "campo": "area_has",
+       "alias": "area_has",
+       "valor": 52.14
+      },
+      {
+       "campo": "area_m2",
+       "alias": "area_m2",
+       "valor": 521360.78
+      },
+      {
+       "campo": "pieza_urba",
+       "alias": "pieza_urba",
+       "valor": "SURORIENTAL"
+      },
+      {
+       "campo": "barrio",
+       "alias": "barrio",
+       "valor": "LA UNIÓN"
+      },
+      {
+       "campo": "st_perimet",
+       "alias": "st_perimet",
+       "valor": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "LIM_Localidad",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/LIM_Localidad/FeatureServer/0",
+   "nombre": "LIM_Localidad",
+   "geometria": "esriGeometryPolygon",
+   "elementos": [
+    {
+     "fraccion": 1.0,
+     "area_m2": 3001.35546875,
+     "atributos": [
+      {
+       "campo": "id",
+       "alias": "id",
+       "valor": 5
+      },
+      {
+       "campo": "nombre",
+       "alias": "nombre",
+       "valor": "SURORIENTE"
+      },
+      {
+       "campo": "area_has",
+       "alias": "area_has",
+       "valor": 1744.09
+      },
+      {
+       "campo": "area_m2",
+       "alias": "area_m2",
+       "valor": 17440923.14
+      },
+      {
+       "campo": "st_perimet",
+       "alias": "st_perimet",
+       "valor": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "General",
+   "titulo": "Direccion",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Direccion/FeatureServer/0",
+   "nombre": "Nomenclatura_Domiciliaria",
+   "geometria": "esriGeometryPoint",
+   "elementos": [
+    {
+     "fraccion": null,
+     "area_m2": null,
+     "atributos": [
+      {
+       "campo": "Codigo_1",
+       "alias": "Codigo",
+       "valor": "080010105000000040001000000000"
+      },
+      {
+       "campo": "Direccion",
+       "alias": "Direccion",
+       "valor": "Calle 30 13C 19"
+      },
+      {
+       "campo": "Clase_Via_",
+       "alias": "Clase_Via_",
+       "valor": "Calle"
+      },
+      {
+       "campo": "Valor_ViaP",
+       "alias": "Valor_ViaP",
+       "valor": "30"
+      },
+      {
+       "campo": "GlobalID_2",
+       "alias": "GlobalID_2",
+       "valor": "847c2df0-7e3f-4157-bede-9b639d66bfe7"
+      },
+      {
+       "campo": "CreationDate",
+       "alias": "CreationDate",
+       "valor": "2026-01-20"
+      },
+      {
+       "campo": "Creator",
+       "alias": "Creator",
+       "valor": "planeacion territorial baq"
+      },
+      {
+       "campo": "EditDate",
+       "alias": "EditDate",
+       "valor": "2026-01-20"
+      },
+      {
+       "campo": "Editor",
+       "alias": "Editor",
+       "valor": "planeacion territorial baq"
+      },
+      {
+       "campo": "lote_actualizacion",
+       "alias": "Lote de Actualización",
+       "valor": "ACTUALIZACION_MASIVA_20260320"
+      }
+     ]
+    },
+    {
+     "fraccion": null,
+     "area_m2": null,
+     "atributos": [
+      {
+       "campo": "Codigo_1",
+       "alias": "Codigo",
+       "valor": "080010105000000040001000000000"
+      },
+      {
+       "campo": "Direccion",
+       "alias": "Direccion",
+       "valor": "Calle 30 13C 19"
+      },
+      {
+       "campo": "Clase_Via_",
+       "alias": "Clase_Via_",
+       "valor": "Calle"
+      },
+      {
+       "campo": "Valor_ViaP",
+       "alias": "Valor_ViaP",
+       "valor": "30"
+      },
+      {
+       "campo": "GlobalID_2",
+       "alias": "GlobalID_2",
+       "valor": "3813440e-3022-4f58-b00d-2e6e0051e9dd"
+      },
+      {
+       "campo": "CreationDate",
+       "alias": "CreationDate",
+       "valor": "2026-01-20"
+      },
+      {
+       "campo": "Creator",
+       "alias": "Creator",
+       "valor": "planeacion territorial baq"
+      },
+      {
+       "campo": "EditDate",
+       "alias": "EditDate",
+       "valor": "2026-01-20"
+      },
+      {
+       "campo": "Editor",
+       "alias": "Editor",
+       "valor": "planeacion territorial baq"
+      },
+      {
+       "campo": "lote_actualizacion",
+       "alias": "Lote de Actualización",
+       "valor": "ACTUALIZACION_MASIVA_20260320"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "avisos": [
+  "No respondieron (protección anti-bots o caídos): geopendata.barranquilla.gov.co. Sus capas no se incluyen."
+ ],
+ "fecha": "2026-09-16 16:15",
+ "ox": 0.0,
+ "oy": 0.0,
+ "area_norma": 3000.0,
+ "area_fuente": "área catastral del predio",
+ "fuente_norma": "C:\\Users\\Juan\\Documents\\5. REPOS\\92. lotes baq\\dist\\norma_edificabilidad_baq.json",
+ "catastro": "https://miciudad.barranquilla.gov.co/gis/rest/services/catastro/datosabiertos/MapServer",
+ "webmap": "d2af7ac624fe413ca6f14cbbe2b0183d"
+}

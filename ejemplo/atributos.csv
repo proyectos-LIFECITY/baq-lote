@@ -1,0 +1,121 @@
+﻿fuente;capa;item;campo;alias;valor;porcentaje_lote
+CATASTRO;Terreno;1;name;Name;080010105000000040001000000000;
+CATASTRO;Terreno;1;relacion_superficie;Relación Superficie;En Rasante;
+CATASTRO;Terreno;1;estado_terreno;Estado Terreno;1;
+CATASTRO;Predio;1;numero_predial_anterior;Numero Predial Anterior;08001010500040001000;
+CATASTRO;Predio;1;condicion_predio;Condición Predio;NPH;
+CATASTRO;Predio;1;destinacion_economica;Destinación Económica;Comercial;
+CATASTRO;Predio;1;codigo_homologado;Código Homologado;AFT0026MLOD;
+CATASTRO;Predio;1;numero_predial_nacional;Número Predial Nacional;080010105000000040001000000000;
+CATASTRO;Predio;1;tipo_predio;Tipo Predio;Predio Privado;
+CATASTRO;Predio;1;estado;Estado;Activo;
+CATASTRO;Predio;1;estado_fmi;Estado FMI;Activo;
+CATASTRO;Predio;1;fecha_apertura_fmi;Fecha Apertura FMI;1974-05-09;
+CATASTRO;Predio;1;area_catastral_terreno;Área Catastral Terreno;3000.0;
+CATASTRO;Predio;1;area_registral_m2;Área Registral M2;3000.0;
+CATASTRO;Predio;1;vigencia_actualizacion;Vigencia Actualización Catastral;2026-01-01;
+CATASTRO;Predio;1;tipo;Tipo;Sector Información Estadística;
+CATASTRO;Predio;1;aplica_efectos_registrales;¿Aplica Efectos Registrales?;No;
+CATASTRO;Predio;1;tipo_vivienda;Tipo de Vivienda;No Aplica;
+CATASTRO;Predio;1;estrato;Estrato;No Aplica;
+CATASTRO;Dirección;1;nombre_predio;Dirección;Calle 30 13 C 19;
+CATASTRO;Dirección;2;nombre_predio;Dirección;Calle 30 13 C 07;
+CATASTRO;Construcción;1;relacion_superficie;Relación Superficie;En Rasante;
+CATASTRO;Construcción;1;identificador;Identificador;A;
+CATASTRO;Construcción;1;tipo_construccion;Tipo Construcción;Convencional;
+CATASTRO;Construcción;1;tipo_dominio;Tipo Dominio;Privado;
+CATASTRO;Construcción;1;total_pisos;Total Pisos;1;
+CATASTRO;Construcción;1;total_sotanos;Total Sotanos;0;
+CATASTRO;Construcción;1;total_mezanines;Total Mezanines;0;
+CATASTRO;Construcción;1;total_semisotanos;Total Semisotanos;0;
+CATASTRO;Construcción;1;altura_total_construccion;Altura Total Construcción;3;
+CATASTRO;Construcción;1;local_id;Local Id;080010105000000040001000000000;
+CATASTRO;Construcción;1;estado_construccion;Estado Construcción;1;
+CATASTRO;Construcción;2;relacion_superficie;Relación Superficie;En Rasante;
+CATASTRO;Construcción;2;identificador;Identificador;A;
+CATASTRO;Construcción;2;tipo_construccion;Tipo Construcción;Convencional;
+CATASTRO;Construcción;2;tipo_dominio;Tipo Dominio;Privado;
+CATASTRO;Construcción;2;total_pisos;Total Pisos;1;
+CATASTRO;Construcción;2;total_sotanos;Total Sotanos;0;
+CATASTRO;Construcción;2;total_mezanines;Total Mezanines;0;
+CATASTRO;Construcción;2;total_semisotanos;Total Semisotanos;0;
+CATASTRO;Construcción;2;altura_total_construccion;Altura Total Construcción;3;
+CATASTRO;Construcción;2;local_id;Local Id;080010105000000040001000000000;
+CATASTRO;Construcción;2;estado_construccion;Estado Construcción;1;
+CALCULADO;Lote;1;AREA_GEOM_M2;Área geométrica m²;3001.36;
+CALCULADO;Lote;1;PERIMETRO_M;Perímetro m;235.02;
+NORMA;TRATAMIENTOS URBANISTICOS _ Tipo;1;CONSOLIDACION 2;Propuesta base;Entre 801 y 4000 m² | 0.020 viv/m2 | 60 viv | 2 pisos;100.0
+NORMA;TRATAMIENTOS URBANISTICOS _ Tipo;1;CONSOLIDACION 2;Propuesta maxima;Entre 801 y 4000 m² | 0.050 viv/m2 | 150 viv | 8 pisos;100.0
+Amenaza y Riesgo;Amenaza por Remocion en Masa;1;NOMBRE;NOMBRE;SURORIENTE;100.0
+Amenaza y Riesgo;Amenaza por Remocion en Masa;1;Nivel_Amenaza;Nivel_Amenaza;Baja;100.0
+Amenaza y Riesgo;Amenaza por Remocion en Masa;1;Fuente;Fuente;Decreto 212 de 2014;100.0
+Amenaza y Riesgo;Amenaza por Remoción en masa;1;Amenaza;Amenaza;Baja;100.0
+Amenaza y Riesgo;Amenaza por Remoción en masa;1;zona;Fuente;Decreto 212 de 2014;100.0
+Amenaza y Riesgo;Amenaza por Remoción en masa;1;AREA_M2;AREA_M2;12595373.47;100.0
+Amenaza y Riesgo;Amenaza por Remoción en masa;1;NOMBRE;NOMBRE;SURORIENTE;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;ALTURA_MAX;ALTURA_MAX;11;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;AREA_HAS;AREA_HAS;244.426;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;ID_EDIFABI;ID_EDIFABI;197;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;obser;obser;x;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;Codigo_Tratamiento;Codigo_Tratamiento;CSD;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;Trat_urbanistico;Trat_urbanistico;Consolidacion;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS _ Tipo;1;Tipo_TratUrb;Tipo_TratUrb;Nivel 2;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Tipo Poligono;1;area_has;AREA_HAS;78.602;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Tipo Poligono;1;actividad;Actividad;ACTIVIDAD INDUSTRIAL;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Tipo Poligono;1;poligtipo;PoligTipo;P-IND-2;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Tipo Poligono;1;nombre_uso;Nombre_Uso;POLIGONO INDUSTRIAL - TIPO 2;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Tipo Poligono;1;simb_activ_;Simb_Activ_;IND;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Actividades;1;area_has;area_has;78.602;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Actividades;1;actividad;Actividad;ACTIVIDAD INDUSTRIAL;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Actividades;1;poligtipo;poligtipo;P-IND-2;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Actividades;1;nombre_uso;nombre_uso;POLIGONO INDUSTRIAL - TIPO 2;100.0
+POT Urbano 2014;ACTIVIDAD USOS URBANOS _ Actividades;1;simb_activ_;simb_activ_;IND;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;ALTURA_MAX;ALTURA_MAX;11;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;AREA_HAS;AREA_HAS;244.426;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;ID_EDIFABI;ID_EDIFABI;197;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;obser;obser;x;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;Codigo_Tratamiento;Codigo_Tratamiento;CSD;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;Trat_urbanistico;Trat_urbanistico;Consolidacion;100.0
+POT Urbano 2014;TRATAMIENTOS URBANISTICOS;1;Tipo_TratUrb;Tipo_TratUrb;Nivel 2;100.0
+POT General 2014 G4;CLASIFICACIÓN DEL SUELO - Tipo;1;id;id;0;100.0
+POT General 2014 G4;CLASIFICACIÓN DEL SUELO - Tipo;1;area_m2;area_m2;93862328.63;100.0
+POT General 2014 G4;CLASIFICACIÓN DEL SUELO - Tipo;1;area_km2;area_km2;93.86;100.0
+POT General 2014 G4;CLASIFICACIÓN DEL SUELO - Tipo;1;clasificac;clasificac;SUELO URBANO;100.0
+POT General 2014 G4;CLASIFICACIÓN DEL SUELO - Tipo;1;st_perimet;st_perimet;0;100.0
+Básicas;Piezas Urbanas;1;Id;Id;8;100.0
+Básicas;Piezas Urbanas;1;NOMBRE;NOMBRE;SURORIENTAL;100.0
+Básicas;Piezas Urbanas;1;LOCALIDAD;LOCALIDAD;Suroriente;100.0
+Básicas;Piezas Urbanas;1;AREA_HAS;AREA_HAS;1155.48;100.0
+Básicas;Piezas Urbanas;1;AREA_M2;AREA_M2;11554790.54;100.0
+Básicas;LIM_Barrio;1;id;id;0;100.0
+Básicas;LIM_Barrio;1;localidad;localidad;SURORIENTE;100.0
+Básicas;LIM_Barrio;1;area_has;area_has;52.14;100.0
+Básicas;LIM_Barrio;1;area_m2;area_m2;521360.78;100.0
+Básicas;LIM_Barrio;1;pieza_urba;pieza_urba;SURORIENTAL;100.0
+Básicas;LIM_Barrio;1;barrio;barrio;LA UNIÓN;100.0
+Básicas;LIM_Barrio;1;st_perimet;st_perimet;0;100.0
+Básicas;LIM_Localidad;1;id;id;5;100.0
+Básicas;LIM_Localidad;1;nombre;nombre;SURORIENTE;100.0
+Básicas;LIM_Localidad;1;area_has;area_has;1744.09;100.0
+Básicas;LIM_Localidad;1;area_m2;area_m2;17440923.14;100.0
+Básicas;LIM_Localidad;1;st_perimet;st_perimet;0;100.0
+General;Direccion;1;Codigo_1;Codigo;080010105000000040001000000000;
+General;Direccion;1;Direccion;Direccion;Calle 30 13C 19;
+General;Direccion;1;Clase_Via_;Clase_Via_;Calle;
+General;Direccion;1;Valor_ViaP;Valor_ViaP;30;
+General;Direccion;1;GlobalID_2;GlobalID_2;847c2df0-7e3f-4157-bede-9b639d66bfe7;
+General;Direccion;1;CreationDate;CreationDate;2026-01-20;
+General;Direccion;1;Creator;Creator;planeacion territorial baq;
+General;Direccion;1;EditDate;EditDate;2026-01-20;
+General;Direccion;1;Editor;Editor;planeacion territorial baq;
+General;Direccion;1;lote_actualizacion;Lote de Actualización;ACTUALIZACION_MASIVA_20260320;
+General;Direccion;2;Codigo_1;Codigo;080010105000000040001000000000;
+General;Direccion;2;Direccion;Direccion;Calle 30 13C 19;
+General;Direccion;2;Clase_Via_;Clase_Via_;Calle;
+General;Direccion;2;Valor_ViaP;Valor_ViaP;30;
+General;Direccion;2;GlobalID_2;GlobalID_2;3813440e-3022-4f58-b00d-2e6e0051e9dd;
+General;Direccion;2;CreationDate;CreationDate;2026-01-20;
+General;Direccion;2;Creator;Creator;planeacion territorial baq;
+General;Direccion;2;EditDate;EditDate;2026-01-20;
+General;Direccion;2;Editor;Editor;planeacion territorial baq;
+General;Direccion;2;lote_actualizacion;Lote de Actualización;ACTUALIZACION_MASIVA_20260320;

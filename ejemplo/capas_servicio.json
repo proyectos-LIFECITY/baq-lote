@@ -1,0 +1,384 @@
+{
+ "catastro": "https://miciudad.barranquilla.gov.co/gis/rest/services/catastro/datosabiertos/MapServer",
+ "webmap": "d2af7ac624fe413ca6f14cbbe2b0183d",
+ "capas_consultadas": [
+  {
+   "grupo": "Instrumentos de Planificación",
+   "titulo": "UAU_LA_LOMA",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/UAU/FeatureServer/0"
+  },
+  {
+   "grupo": "Instrumentos de Planificación",
+   "titulo": "Tipo_IPT",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Tipo_IPT/FeatureServer/0"
+  },
+  {
+   "grupo": "Instrumentos de Planificación",
+   "titulo": "Area Patrimonial",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/AreaPatrimonial/FeatureServer/0"
+  },
+  {
+   "grupo": "Instrumentos de Planificación",
+   "titulo": "PEMP_Prado",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/PEMP_Prado/FeatureServer/0"
+  },
+  {
+   "grupo": "Instrumentos de Planificación",
+   "titulo": "BIC_BarrioAbajo",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/BIC_BarrioAbajo/FeatureServer/0"
+  },
+  {
+   "grupo": "Instrumentos de Planificación",
+   "titulo": "Planes Parciales",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/POT_IPT_Planes_Parciales/FeatureServer/1"
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Arcilla Expansiva",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Arcillolitas_laminadas_Perdices/FeatureServer/0"
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Amenaza por Remocion en Masa",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Remoción2024/FeatureServer/0"
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Amenaza por Remoción en masa",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/completa_AMENAZA_POR_REMOCION_ESTUDIO_2024/FeatureServer/0"
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Amenaza por Inundación",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Inundación2024/FeatureServer/0"
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "Riesgo por Remoción en Masa",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/RiesgoRemoción/FeatureServer/0"
+  },
+  {
+   "grupo": "Amenaza y Riesgo",
+   "titulo": "CampoAlegre",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/CampoAlegre_Panorama2022/FeatureServer/0"
+  },
+  {
+   "grupo": "Espacio Público",
+   "titulo": "EPU_Andén",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/EPU_Andén/FeatureServer/0"
+  },
+  {
+   "grupo": "Espacio Público",
+   "titulo": "EP_EFECTIVO",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/EP_EFECTIVO/FeatureServer/0"
+  },
+  {
+   "grupo": "Espacio Público",
+   "titulo": "EP_PROPUESTO",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/EP_PROPUESTO/FeatureServer/0"
+  },
+  {
+   "grupo": "Espacio Público",
+   "titulo": "Suelos de Protección",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/SUELOS_DE_PROTECCIÓN_/FeatureServer/0"
+  },
+  {
+   "grupo": "POT Rural 2014",
+   "titulo": "R-5 Actividad Usos Propuestos Rural",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Mapa_Capas_POT_WFL1/FeatureServer/254"
+  },
+  {
+   "grupo": "POT Rural 2014",
+   "titulo": "R-1 Protección Conservación",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Mapa_Capas_POT_WFL1/FeatureServer/218"
+  },
+  {
+   "grupo": "POT Rural 2014",
+   "titulo": "Parques Propuestos",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Mapa_Capas_POT_WFL1/FeatureServer/217"
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "TRATAMIENTOS URBANISTICOS _ Tipo",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/TRATAMIENTOS_URBANISTICOS___Tipo/FeatureServer/0"
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "ACTIVIDAD USOS URBANOS _ Tipo Poligono",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/ACTIVIDAD_USOS_URBANOS___Tipo_Poligono/FeatureServer/0"
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "ACTIVIDAD USOS URBANOS _ Actividades",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/ACTIVIDAD_USOS_URBANOS___Actividades/FeatureServer/0"
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "TRATAMIENTOS URBANISTICOS",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/TRATAMIENTOS_URBANISTICOS_2024/FeatureServer/0"
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "ALINEAMIENTO",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Alineamiento_Bq/FeatureServer/0"
+  },
+  {
+   "grupo": "POT Urbano 2014",
+   "titulo": "Estratificacion 1994",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Estrato1994_Panorama/FeatureServer/0"
+  },
+  {
+   "grupo": "U-9 Conservación del Patrimonio Historico",
+   "titulo": "POT Construcción Bienes Patrimoniales",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/68"
+  },
+  {
+   "grupo": "U-8 Servicios Publicos de Energia Electrica",
+   "titulo": "Torres_ENERGIA_AltaTension",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/53"
+  },
+  {
+   "grupo": "U-8 Servicios Publicos de Energia Electrica",
+   "titulo": "Red_ENERGIA_AltaTension",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/54"
+  },
+  {
+   "grupo": "U-8 Servicios Publicos de Energia Electrica",
+   "titulo": "Red_ENERGIA_Subestaciones",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/55"
+  },
+  {
+   "grupo": "U-7 Servicios Publicos de Alcantarillado",
+   "titulo": "Red ALCANTARILLADO (Pluvial)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/48"
+  },
+  {
+   "grupo": "U-7 Servicios Publicos de Alcantarillado",
+   "titulo": "RED ALCANTARILLADO",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/50"
+  },
+  {
+   "grupo": "U-7 Servicios Publicos de Alcantarillado",
+   "titulo": "Proyectos ALCANTARILLADO 2013",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/49"
+  },
+  {
+   "grupo": "U-7 Servicios Publicos de Alcantarillado",
+   "titulo": "AREAS RESERVA (Alcantarillado)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/51"
+  },
+  {
+   "grupo": "U-6 Servicios Públicos de Acueducto",
+   "titulo": "Proyectos ACUEDUCTO 2013",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/44"
+  },
+  {
+   "grupo": "U-6 Servicios Públicos de Acueducto",
+   "titulo": "Red ACUEDUCTO",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/45"
+  },
+  {
+   "grupo": "U-6 Servicios Públicos de Acueducto",
+   "titulo": "Areas RESERVA (Acueducto)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/46"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Administración",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/18"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Alcaldia Menores (Propuestas)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/19"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Educación Superior",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/20"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Hogares Infantiles",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/21"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "C.D.I.",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/22"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "C.D.I. Propuestos",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/23"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Centros de Vida",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/24"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Jardines Sociales",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/25"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Colegios Públicos",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/26"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Salud",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/27"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Pasos - Caminos",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/28"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Seguridad (Defensa)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/29"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Seguridad (Policia)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/30"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Comisarias  (Seguridad)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/31"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Inspecciones de Policia",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/32"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Cultura",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/33"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "Cementerios",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Equipamientos_CEMENTERIOS/FeatureServer/0"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "MERCADOS Plazas Prop",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Equip_MERCADOS_Plazas_Prop/FeatureServer/0"
+  },
+  {
+   "grupo": "U-4 POT Equipamiento 2014",
+   "titulo": "MERCADO Plazas",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Equipamientos_MERCADO_Plazas/FeatureServer/0"
+  },
+  {
+   "grupo": "U 1-2-3 POT Movilidad 2014",
+   "titulo": "POT Componente Urbano - INTERCAMBIADORES MULTIMODALES Trans",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/5"
+  },
+  {
+   "grupo": "U 1-2-3 POT Movilidad 2014",
+   "titulo": "U-3 Vias_Urbanas_Propuestas",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/3"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Estaciones Metro (Rio)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/6"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Estaciones Transmasivo",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/7"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Via Accesos a Puerto",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/8"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Avenida del Rio",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/9"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Rutas Metro  (Rio Fluvial)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/10"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Ciclorutas  (Propuestas)",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/11"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Vias Transmasivo",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/12"
+  },
+  {
+   "grupo": "U-2 Subsistema de Transporte",
+   "titulo": "Via de la PROSPERIDAD_POT",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/14"
+  },
+  {
+   "grupo": "U 1-2-3 POT Movilidad 2014",
+   "titulo": "U-1 Vias Urbanas",
+   "url": "https://geopendata.barranquilla.gov.co/arcgis/rest/services/SDP_Plan_Ordenamiento_Territorial/POT_Componente_Urbano/MapServer/16"
+  },
+  {
+   "grupo": "POT General 2014 G4",
+   "titulo": "CLASIFICACIÓN DEL SUELO - Tipo",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/CLASIFICACIÓN_DEL_SUELO/FeatureServer/0"
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "Nomenclatura Víal",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Nom_Víal_v3/FeatureServer/0"
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "Piezas Urbanas",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Piezas_URBANAS/FeatureServer/0"
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "LIM_Barrio",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/LIM_Barrio/FeatureServer/0"
+  },
+  {
+   "grupo": "Básicas",
+   "titulo": "LIM_Localidad",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/LIM_Localidad/FeatureServer/0"
+  },
+  {
+   "grupo": "General",
+   "titulo": "Mi Techo Propio",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/MITECHOPROPIO/FeatureServer/0"
+  },
+  {
+   "grupo": "General",
+   "titulo": "Hitos Turisticos",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/MAPA_TURIS/FeatureServer/0"
+  },
+  {
+   "grupo": "General",
+   "titulo": "Direccion",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/Direccion/FeatureServer/0"
+  },
+  {
+   "grupo": "General",
+   "titulo": "Sitios de Interés",
+   "url": "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/SITIOS_DE_INTERES_/FeatureServer/0"
+  }
+ ],
+ "no_disponibles": [
+  "geopendata.barranquilla.gov.co"
+ ]
+}

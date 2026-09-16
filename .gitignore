@@ -1,0 +1,11 @@
+__pycache__/
+node_modules/
+build/
+dist/
+*.spec
+lote_*/
+inventario_capas/
+_pruebas/
+.firebase/
+.claude/
+firebase-debug*.log

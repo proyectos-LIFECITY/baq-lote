@@ -1,0 +1,253 @@
+{
+ "RENOVACION|REACTIVACION": {
+  "base": [
+   [
+    600,
+    0.01,
+    2
+   ],
+   [
+    800,
+    0.012,
+    2
+   ],
+   [
+    3000,
+    0.02,
+    2
+   ],
+   [
+    null,
+    0.02,
+    2
+   ]
+  ],
+  "maxima": [
+   [
+    600,
+    0.012,
+    3
+   ],
+   [
+    800,
+    0.04,
+    5
+   ],
+   [
+    3000,
+    0.06,
+    8
+   ],
+   [
+    null,
+    0.07,
+    40
+   ]
+  ],
+  "nota_maxima_ultimo": "Mayor a 3000 m²: solo cuando lo autorice el Plan Zonal"
+ },
+ "RENOVACION|REDESARROLLO": {
+  "texto_base": "Conforme al Plan Parcial",
+  "texto_maxima": "Conforme al Plan Parcial hasta máximo 40 pisos"
+ },
+ "MEJORAMIENTO INTEGRAL|1": {
+  "base": [
+   [
+    600,
+    0.01,
+    5
+   ],
+   [
+    null,
+    0.012,
+    5
+   ]
+  ],
+  "maxima": [
+   [
+    600,
+    0.012,
+    5
+   ],
+   [
+    null,
+    0.04,
+    5
+   ]
+  ]
+ },
+ "MEJORAMIENTO INTEGRAL|2": {
+  "base": [
+   [
+    600,
+    0.01,
+    5
+   ],
+   [
+    800,
+    0.012,
+    5
+   ],
+   [
+    null,
+    0.02,
+    5
+   ]
+  ],
+  "maxima": [
+   [
+    600,
+    0.012,
+    5
+   ],
+   [
+    800,
+    0.04,
+    5
+   ],
+   [
+    null,
+    0.05,
+    8
+   ]
+  ]
+ },
+ "CONSOLIDACION|1A": {
+  "base": [
+   [
+    null,
+    0.01,
+    2
+   ]
+  ],
+  "maxima": [
+   [
+    null,
+    0.01,
+    2
+   ]
+  ]
+ },
+ "CONSOLIDACION|1B": {
+  "base": [
+   [
+    600,
+    0.01,
+    2
+   ],
+   [
+    null,
+    0.012,
+    2
+   ]
+  ],
+  "maxima": [
+   [
+    600,
+    0.012,
+    3
+   ],
+   [
+    null,
+    0.04,
+    5
+   ]
+  ]
+ },
+ "CONSOLIDACION|2": {
+  "base": [
+   [
+    600,
+    0.01,
+    2
+   ],
+   [
+    800,
+    0.012,
+    2
+   ],
+   [
+    4000,
+    0.02,
+    2
+   ],
+   [
+    null,
+    0.02,
+    2
+   ]
+  ],
+  "maxima": [
+   [
+    600,
+    0.012,
+    3
+   ],
+   [
+    800,
+    0.04,
+    5
+   ],
+   [
+    4000,
+    0.05,
+    8
+   ],
+   [
+    null,
+    0.05,
+    11
+   ]
+  ]
+ },
+ "CONSOLIDACION|3": {
+  "base": [
+   [
+    600,
+    0.01,
+    2
+   ],
+   [
+    800,
+    0.012,
+    2
+   ],
+   [
+    2000,
+    0.02,
+    2
+   ],
+   [
+    null,
+    0.02,
+    2
+   ]
+  ],
+  "maxima": [
+   [
+    600,
+    0.012,
+    3
+   ],
+   [
+    800,
+    0.04,
+    5
+   ],
+   [
+    2000,
+    0.05,
+    8
+   ],
+   [
+    null,
+    0.06,
+    16
+   ]
+  ]
+ },
+ "CONSOLIDACION|ESPECIAL": {
+  "texto_base": "Ver artículos 350 y 353 del decreto",
+  "texto_maxima": "Ver artículos 350 y 353 del decreto"
+ }
+}

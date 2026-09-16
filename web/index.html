@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>BAQ Lote · Life City</title>
+  <meta name="description" content="Análisis catastral y normativo de lotes en Barranquilla: densidad, altura, plano DXF e informe.">
+  <meta name="theme-color" content="#14573a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <!-- ============================== Ingreso ============================== -->
+  <section id="ingreso" class="ingreso" hidden>
+    <div class="ingreso-arte" aria-hidden="true">
+      <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="cuadricula" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-opacity=".08"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="600" fill="url(#cuadricula)"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-opacity=".35">
+          <path d="M80 120 L250 90 L280 260 L110 290Z"/><path d="M290 80 L470 50 L500 210 L320 245Z"/>
+          <path d="M120 310 L290 280 L320 450 L150 480Z"/><path d="M330 265 L510 230 L540 400 L360 435Z"/>
+          <path d="M160 500 L330 470 L345 560 L175 590Z"/>
+        </g>
+        <path d="M330 265 L510 230 L540 400 L360 435Z" fill="#5cc28d" fill-opacity=".22" stroke="#8fe0b5" stroke-width="2.5"/>
+        <g fill="#8fe0b5" font-family="Space Grotesk, sans-serif" font-size="14">
+          <text x="405" y="238">48.08</text><text x="538" y="320">31.20</text>
+        </g>
+      </svg>
+      <div class="ingreso-lema">
+        <span class="marca-chip">Life City · BIM Management Hub</span>
+        <h1>Norma de cualquier lote de Barranquilla, en segundos.</h1>
+        <p>Catastro, tratamiento urbanístico, densidad y altura, con plano DXF para Revit e informe listo para compartir.</p>
+        <ul class="lema-lista">
+          <li>Busca por referencia catastral, dirección o en el mapa</li>
+          <li>Cruza todas las capas de Panorama Urbano</li>
+          <li>Guarda tus consultas y retómalas desde cualquier equipo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ingreso-panel">
+      <div class="ingreso-caja">
+        <div class="marca"><span class="marca-logo" aria-hidden="true"></span><span>BAQ <b>Lote</b></span></div>
+        <h2 id="ingreso-titulo">Ingresa a tu cuenta</h2>
+        <p class="sutil" id="ingreso-sub">Tus consultas quedan guardadas en tu cuenta.</p>
+        <button class="btn btn-google" id="btn-google" type="button">
+          <svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>
+          Continuar con Google
+        </button>
+        <div class="separador"><span>o con tu correo</span></div>
+        <form id="form-ingreso" novalidate>
+          <label class="campo" id="campo-nombre" hidden><span>Nombre</span>
+            <input name="nombre" autocomplete="name" placeholder="Tu nombre"></label>
+          <label class="campo"><span>Correo</span>
+            <input name="correo" type="email" autocomplete="email" placeholder="nombre@empresa.com" required></label>
+          <label class="campo"><span>Contraseña</span>
+            <input name="clave" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres" required minlength="6"></label>
+          <p class="error" id="ingreso-error" role="alert" hidden></p>
+          <button class="btn btn-primario btn-bloque" id="btn-ingresar" type="submit">Ingresar</button>
+        </form>
+        <div class="ingreso-pie">
+          <button class="enlace" id="btn-alternar" type="button">¿No tienes cuenta? <b>Crear cuenta</b></button>
+          <button class="enlace" id="btn-recuperar" type="button">Olvidé mi contraseña</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== App ============================== -->
+  <div id="app" class="app" hidden>
+    <header class="barra">
+      <div class="marca"><span class="marca-logo" aria-hidden="true"></span><span>BAQ <b>Lote</b></span>
+        <span class="marca-sub">Análisis normativo de lotes · Barranquilla</span></div>
+      <div class="usuario">
+        <button class="usuario-btn" id="btn-usuario" aria-haspopup="menu" aria-expanded="false">
+          <span class="avatar" id="avatar"></span><span class="usuario-nombre" id="usuario-nombre"></span>
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </button>
+        <div class="menu" id="menu-usuario" role="menu" hidden>
+          <div class="menu-cab"><b id="menu-nombre"></b><span id="menu-correo"></span></div>
+          <button role="menuitem" id="btn-salir">Cerrar sesión</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="cuerpo">
+      <aside class="panel" id="panel">
+        <nav class="pestanas" role="tablist">
+          <button role="tab" class="pestana activa" data-vista="consulta" aria-selected="true">Nueva consulta</button>
+          <button role="tab" class="pestana" data-vista="historial" aria-selected="false">Mis consultas <span class="contador" id="contador">0</span></button>
+        </nav>
+
+        <!-- ---------------- Nueva consulta ---------------- -->
+        <section class="vista" id="vista-consulta">
+          <form class="buscador" id="form-busqueda">
+            <div class="segmentado" role="radiogroup" aria-label="Tipo de búsqueda">
+              <button type="button" class="seg activo" data-tipo="ref" role="radio" aria-checked="true">Referencia</button>
+              <button type="button" class="seg" data-tipo="dir" role="radio" aria-checked="false">Dirección</button>
+              <button type="button" class="seg" data-tipo="mapa" role="radio" aria-checked="false">Mapa</button>
+            </div>
+            <div class="entrada" id="entrada-texto">
+              <svg class="entrada-icono" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input id="q" autocomplete="off" spellcheck="false" placeholder="Número predial nacional (30 dígitos)">
+              <button class="btn btn-primario" id="btn-buscar" type="submit">Analizar</button>
+            </div>
+            <p class="pista" id="pista">Ej.: <button type="button" class="chip" data-ejemplo="080010105000000040001000000000">0800101050000000400010…</button> También acepta el número anterior de 20 dígitos.</p>
+            <div class="aviso-mapa" id="aviso-mapa" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg>
+              <span>Haz clic sobre un lote en el mapa. Acércate para ver los linderos catastrales.</span>
+            </div>
+            <label class="interruptor"><input type="checkbox" id="chk-capas" checked><span></span>Cruzar capas normativas de Panorama Urbano</label>
+          </form>
+
+          <div class="progreso" id="progreso" hidden>
+            <ol class="pasos" id="pasos">
+              <li data-paso="1">Catastro</li><li data-paso="2">Predio</li><li data-paso="3">Capas</li><li data-paso="4">Norma</li>
+            </ol>
+            <div class="barra-progreso"><span id="barra-progreso"></span></div>
+            <p class="sutil" id="texto-progreso">Buscando…</p>
+          </div>
+
+          <div class="error-caja" id="error-busqueda" role="alert" hidden></div>
+
+          <div id="resultado" class="resultado" hidden></div>
+
+          <div class="vacio" id="vacio">
+            <div class="vacio-ilustracion" aria-hidden="true">
+              <svg viewBox="0 0 120 90"><path d="M15 25 L60 12 L72 55 L27 68Z" fill="currentColor" fill-opacity=".08" stroke="currentColor" stroke-opacity=".5" stroke-width="1.5"/><path d="M60 12 L100 4 L110 45 L72 55" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="1.5"/><circle cx="46" cy="40" r="4" fill="currentColor"/></svg>
+            </div>
+            <h3>Analiza un lote</h3>
+            <p>Busca por referencia catastral o dirección, o selecciona un lote directamente en el mapa. Obtendrás tratamiento, viviendas y pisos permitidos, plano DXF e informe.</p>
+          </div>
+        </section>
+
+        <!-- ---------------- Historial ---------------- -->
+        <section class="vista" id="vista-historial" hidden>
+          <div class="entrada entrada-compacta">
+            <svg class="entrada-icono" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="filtro" placeholder="Filtrar por nombre, dirección o tratamiento">
+          </div>
+          <ul class="lista" id="lista"></ul>
+          <div class="vacio" id="historial-vacio" hidden>
+            <h3>Aún no tienes consultas guardadas</h3>
+            <p>Analiza un lote y pulsa <b>Guardar</b> para verlo aquí.</p>
+          </div>
+        </section>
+      </aside>
+
+      <section class="mapa-contenedor">
+        <div id="mapa" aria-label="Mapa de Barranquilla"></div>
+        <div class="mapa-controles">
+          <div class="capas-base" role="radiogroup" aria-label="Mapa base">
+            <button class="activo" data-base="mapa" role="radio" aria-checked="true">Mapa</button>
+            <button data-base="satelite" role="radio" aria-checked="false">Satélite</button>
+          </div>
+          <label class="interruptor interruptor-mapa"><input type="checkbox" id="chk-predios" checked><span></span>Linderos catastrales</label>
+        </div>
+        <div class="leyenda" id="leyenda" hidden>
+          <span><i class="sw sw-lote"></i>Lote</span><span><i class="sw sw-cons"></i>Construcciones</span><span><i class="sw sw-guardado"></i>Guardados</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ============================== Diálogos ============================== -->
+  <dialog id="dlg-guardar" class="dialogo">
+    <form method="dialog" id="form-guardar">
+      <h3 id="dlg-guardar-titulo">Guardar consulta</h3>
+      <label class="campo"><span>Nombre</span><input name="nombre" required maxlength="140"></label>
+      <label class="campo"><span>Notas <small>(opcional)</small></span><textarea name="notas" rows="3" maxlength="2000" placeholder="Cliente, uso previsto, observaciones…"></textarea></label>
+      <p class="error" id="guardar-error" hidden></p>
+      <div class="dialogo-acciones">
+        <button class="btn btn-fantasma" value="cancelar" formnovalidate>Cancelar</button>
+        <button class="btn btn-primario" value="ok" id="btn-confirmar-guardar">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="dlg-confirmar" class="dialogo">
+    <form method="dialog">
+      <h3 id="confirmar-titulo">¿Eliminar consulta?</h3>
+      <p class="sutil" id="confirmar-texto">Esta acción no se puede deshacer.</p>
+      <div class="dialogo-acciones">
+        <button class="btn btn-fantasma" value="cancelar">Cancelar</button>
+        <button class="btn btn-peligro" value="ok">Eliminar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div class="cargando-inicial" id="cargando-inicial"><span class="marca-logo" aria-hidden="true"></span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

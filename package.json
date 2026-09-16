@@ -1,0 +1,13 @@
+{
+  "name": "baq-lote",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Análisis catastral y normativo de lotes en Barranquilla (Life City)",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 5000 --directory web",
+    "test": "node --test web/test/offline.test.mjs",
+    "test:vivo": "node web/test/en-vivo.mjs",
+    "deploy": "firebase deploy --only hosting,firestore:rules"
+  }
+}
