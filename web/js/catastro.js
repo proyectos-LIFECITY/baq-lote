@@ -78,11 +78,31 @@ export class Catastro {
   url(lid) { return `${this.base}/${lid}`; }
 
   async campos(lid) {
-    if (!this._campos[lid]) this._campos[lid] = camposDe(await this.cli.info(this.url(lid)));
+    if (!this._campos[lid]) {
+      try {
+        this._campos[lid] = camposDe(await this.cli.info(this.url(lid)));
+      } catch (e) {
+        if (lid !== L.PREDIO) throw e;
+        this._campos[lid] = {};
+      }
+    }
     return this._campos[lid];
   }
 
   q(lid, params) { return this.cli.features(this.url(lid), params); }
+
+  /** Consulta a la tabla Predio; el catastro a veces la retira del servicio público. */
+  async qPredio(params) {
+    if (this.sinPredios) return [];
+    try {
+      return await this.q(L.PREDIO, params);
+    } catch (e) {
+      if (!/not found|no existe|invalid/i.test(e.message)) throw e;
+      this.sinPredios = true;
+      this.cli.log("La tabla Predio no está disponible hoy en el catastro; se continúa solo con el terreno.", "aviso");
+      return [];
+    }
+  }
 
   async terrenoPorRef(ref) {
     const dig = String(ref).replace(/\D/g, "");
@@ -92,19 +112,31 @@ export class Catastro {
     // Sin OR entre textos: el firewall del servidor lo confunde con inyección SQL
     const campos = ["numero_predial_nacional", "numero_predial_anterior"];
     let predios = [];
-    for (const c of campos) predios.push(...await this.q(L.PREDIO, { where: `${c} = ${sqlTxt(dig)}` }));
+    for (const c of campos) predios.push(...await this.qPredio({ where: `${c} = ${sqlTxt(dig)}` }));
     if (!predios.length && dig.length >= 8) {
       this.cli.log(`Sin coincidencia exacta; buscando referencias que empiecen por ${dig}…`);
       for (const c of campos)
-        predios.push(...await this.q(L.PREDIO, { where: `${c} LIKE ${sqlTxt(dig + "%")}`, resultRecordCount: 20 }));
+        predios.push(...await this.qPredio({ where: `${c} LIKE ${sqlTxt(dig + "%")}`, resultRecordCount: 20 }));
       predios = [...new Map(predios.map((p) => [p.attributes.globalid, p])).values()];
+      if (!predios.length) {
+        // Sin tabla Predio (o sin coincidencias): se busca el prefijo en los terrenos
+        const ts = await this.q(L.TERRENO, { where: `name LIKE ${sqlTxt(dig + "%")}`, resultRecordCount: 20 });
+        if (ts.length === 1) return [ts[0], null];
+        if (ts.length > 1) {
+          const err = new ErrorLote(`La referencia es ambigua (${ts.length}+ terrenos). Elige uno de la lista.`);
+          err.opciones = ts.map((t) => t.attributes.name);
+          throw err;
+        }
+      }
       if (predios.length > 1) {
         const err = new ErrorLote(`La referencia es ambigua (${predios.length}+ predios). Elige uno de la lista.`);
         err.opciones = predios.slice(0, 20).map((p) => p.attributes.numero_predial_nacional);
         throw err;
       }
     }
-    if (!predios.length) throw new ErrorLote(`No se encontró ningún predio con la referencia ${dig}.`);
+    if (!predios.length)
+      throw new ErrorLote(`No se encontró ningún lote con la referencia ${dig}.` + (this.sinPredios
+        ? " Hoy el catastro solo permite buscar por el número predial nacional del terreno (30 dígitos); prueba con la dirección o el mapa." : ""));
     const terreno = await this.terrenoDePredio(predios[0].attributes.globalid);
     if (!terreno) throw new ErrorLote("El predio no tiene terreno asociado en la cartografía.");
     return [terreno, predios[0]];
@@ -182,7 +214,7 @@ export class Catastro {
       .map((r) => r.attributes.cr_predio_guid);
     const predios = [];
     for (let i = 0; i < gids.length; i += 50)
-      predios.push(...await this.q(L.PREDIO, { where: `globalid IN (${gids.slice(i, i + 50).map(sqlTxt).join(", ")})` }));
+      predios.push(...await this.qPredio({ where: `globalid IN (${gids.slice(i, i + 50).map(sqlTxt).join(", ")})` }));
     return predios;
   }
 

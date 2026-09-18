@@ -1,6 +1,6 @@
 // BAQ Lote · interfaz principal
 import { Mapa } from "./mapa.js";
-import { VERSION, ejecutar, resumir } from "./motor.js";
+import { DESCARGO, URL_LIFECITY, VERSION, ejecutar, resumir } from "./motor.js";
 import { cargarNorma } from "./norma.js";
 import * as nube from "./nube.js";
 import { csv, dxf, fmt, geojson, informe } from "./salidas.js";
@@ -282,6 +282,10 @@ function pintarResultado() {
       <button class="descarga" data-archivo="csv"><span class="ext naranja">CSV</span><div><b>Atributos</b><small>Excel · catastro, norma y capas</small></div>${ICONO_DESCARGA}</button>
       <button class="descarga" data-archivo="geojson"><span class="ext">GEO</span><div><b>GeoJSON</b><small>QGIS / Google Earth · WGS84</small></div>${ICONO_DESCARGA}</button>
     </div>
+    <a class="cta-servicio" href="${URL_LIFECITY}" target="_blank" rel="noopener">
+      <div><b>¿Vas a desarrollar este lote?</b><span>Coordinación BIM Total con Life City: modelado, coordinación, interferencias, planos y cantidades.</span></div>
+      <span class="cta-boton">Solicitar propuesta</span></a>
+    <p class="descargo"><b>Descargo de responsabilidad.</b> ${esc(DESCARGO)} Información de referencia: no reemplaza el concepto de norma urbanística ni la licencia.</p>
     ${datos.registro?.length ? `<details class="registro"><summary>Registro de la consulta (${datos.registro.length})</summary><ol>${
       datos.registro.map((r) => `<li class="${esc(r.nivel)}">${esc(r.msg)}</li>`).join("")}</ol></details>` : ""}`;
   cont.hidden = false;

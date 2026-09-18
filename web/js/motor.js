@@ -9,6 +9,9 @@ export const WEBMAP = "d2af7ac624fe413ca6f14cbbe2b0183d"; // WebMap del geovisor
 const PORTAL = (id) => `https://www.arcgis.com/sharing/rest/content/items/${id}/data`;
 export const MIN_FRACCION_NORMA = 0.02; // tratamientos que cubren menos del 2% se ignoran
 const PAT_TRATAMIENTO = /tratam/i;
+const PAT_INSTRUMENTO = /plan(es)?[ _]*parcial|plan(es)?[ _]*zonal|pemp|patrimon|bic_|ipt/i;
+export const URL_LIFECITY = "https://www.lifecity.com.co/";
+export const DESCARGO = "El cálculo de densidad y altura usa únicamente la tabla general de edificabilidad (Renovación, Mejoramiento Integral y Consolidación). Todavía no incorpora la norma específica de Planes Parciales, Planes Zonales ni Planes Especiales de Manejo y Protección (PEMP); si el lote está dentro de alguno de ellos, esa norma prevalece y el resultado puede ser distinto.";
 
 const S3 = "https://services3.arcgis.com/oGYAc07w6wsvgUYr/arcgis/rest/services/";
 const CAPAS_RESPALDO = [
@@ -150,6 +153,9 @@ export async function ejecutar(busqueda, { log = () => {}, etapa = () => {}, sin
   etapa(2, "Predio, direcciones y construcciones");
   const predios = await cat.prediosDeTerreno(ta.globalid);
   const predio = predioBuscado || predios.find((p) => p.attributes.numero_predial_nacional === npn) || predios[0] || null;
+  if (cat.sinPredios)
+    avisos.push("El catastro no tiene disponible hoy la tabla de predios: no se muestran área catastral, destinación ni estrato, " +
+      "y el cálculo usa el área geométrica del polígono.");
   if (predios.length > 1)
     avisos.push(`El terreno tiene ${predios.length} predios asociados (propiedad horizontal o englobe). ` +
       `Se muestran los datos del predio ${predio.attributes.numero_predial_nacional}.`);
@@ -188,6 +194,10 @@ export async function ejecutar(busqueda, { log = () => {}, etapa = () => {}, sin
   const areaNorma = areaOficial || area;
   const norma = evaluarNorma(cruces, areaNorma);
   if (!sinCapas && !norma.length) avisos.push("No se identificó tratamiento urbanístico sobre el lote.");
+  const instrumentos = cruces.filter((c) => PAT_INSTRUMENTO.test(c.titulo)).map((c) => c.titulo);
+  if (instrumentos.length)
+    avisos.push(`El lote cruza instrumentos con norma propia (${[...new Set(instrumentos)].join(", ")}). ` +
+      "Su norma específica aún no está incorporada al cálculo y prevalece sobre la tabla general: verifica antes de decidir.");
   if (norma.length > 1) avisos.push(`El lote cruza ${norma.length} tratamientos; se marca como principal el de mayor cobertura.`);
 
   etapa(5, "Listo");

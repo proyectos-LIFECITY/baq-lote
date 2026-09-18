@@ -337,17 +337,36 @@ class Catastro:
     def __init__(self, cli, base=CATASTRO):
         self.cli, self.base = cli, base.rstrip("/")
         self._campos = {}
+        self.sin_predios = False
 
     def url(self, lid):
         return "%s/%s" % (self.base, lid)
 
     def campos(self, lid):
         if lid not in self._campos:
-            self._campos[lid] = campos_de(self.cli.info(self.url(lid)))
+            try:
+                self._campos[lid] = campos_de(self.cli.info(self.url(lid)))
+            except ErrorLote:
+                if lid != T_PREDIO:
+                    raise
+                self._campos[lid] = {}
         return self._campos[lid]
 
     def q(self, lid, **kw):
         return self.cli.features(self.url(lid), **kw)
+
+    def q_predio(self, **kw):
+        """Consulta a la tabla Predio; el catastro a veces la retira del servicio público."""
+        if self.sin_predios:
+            return []
+        try:
+            return self.q(T_PREDIO, **kw)
+        except ErrorLote as e:
+            if not re.search(r"not found|no existe|invalid", str(e), re.I):
+                raise
+            self.sin_predios = True
+            self.cli.log("  ! La tabla Predio no está disponible hoy en el catastro; se continúa solo con el terreno.")
+            return []
 
     # --- búsqueda de terreno ---------------------------------------------- #
     def terreno_por_ref(self, ref):
@@ -360,12 +379,19 @@ class Catastro:
         # Número predial nacional (30) o anterior (20) en la tabla de predios (p.ej. unidades PH)
         # (sin OR entre textos: el firewall del servidor lo confunde con inyección SQL)
         campos = ("numero_predial_nacional", "numero_predial_anterior")
-        predios = [f for c in campos for f in self.q(T_PREDIO, where="%s = %s" % (c, sql_txt(dig)))]
+        predios = [f for c in campos for f in self.q_predio(where="%s = %s" % (c, sql_txt(dig)))]
         if not predios and len(dig) >= 8:
             self.cli.log("  Sin coincidencia exacta; buscando referencias que empiecen por %s…" % dig)
-            predios = [f for c in campos for f in self.q(T_PREDIO, where="%s LIKE %s" % (c, sql_txt(dig + "%")),
-                                                         resultRecordCount=20)]
+            predios = [f for c in campos for f in self.q_predio(where="%s LIKE %s" % (c, sql_txt(dig + "%")),
+                                                          resultRecordCount=20)]
             predios = list({p["attributes"]["globalid"]: p for p in predios}.values())
+            if not predios:
+                ts = self.q(L_TERRENO, where="name LIKE %s" % sql_txt(dig + "%"), resultRecordCount=20)
+                if len(ts) == 1:
+                    return ts[0], None
+                if len(ts) > 1:
+                    raise ErrorLote("La referencia es ambigua (%d+ terrenos). Opciones: %s" % (
+                        len(ts), ", ".join(t["attributes"]["name"] for t in ts[:10])))
             if len(predios) > 1:
                 ops = ", ".join(p["attributes"]["numero_predial_nacional"] for p in predios[:10])
                 raise ErrorLote("La referencia es ambigua (%d+ predios). Opciones: %s" % (len(predios), ops))
@@ -446,7 +472,7 @@ class Catastro:
         gids = [r["attributes"]["cr_predio_guid"] for r in rel]
         predios = []
         for i in range(0, len(gids), 50):
-            predios += self.q(T_PREDIO, where="globalid IN (%s)" % ", ".join(sql_txt(g) for g in gids[i:i + 50]))
+            predios += self.q_predio(where="globalid IN (%s)" % ", ".join(sql_txt(g) for g in gids[i:i + 50]))
         return predios
 
     def direcciones(self, terreno_gid, predio_gid=None):
@@ -900,6 +926,7 @@ Tabla: {e(datos['fuente_norma'])}.</small></p>
 <h2>Datos catastrales</h2>
 <div class="scroll"><table><tr><th>Campo</th><th>Valor</th></tr>{filas_predio}</table></div>
 
+<p><small><b>Descargo de responsabilidad.</b> El cálculo de densidad y altura usa únicamente la tabla general de edificabilidad (Renovación, Mejoramiento Integral y Consolidación). Todavía no incorpora la norma específica de Planes Parciales, Planes Zonales ni Planes Especiales de Manejo y Protección (PEMP); si el lote está dentro de alguno de ellos, esa norma prevalece y el resultado puede ser distinto. Informe de referencia: no constituye concepto de norma ni licencia.</small></p>
 <p><small>Fuentes: {e(datos['catastro'])} · WebMap Panorama Urbano ({e(datos['webmap'])}).
 Información de referencia; no reemplaza certificados catastrales, conceptos de norma urbanística
 ni licencias. Porcentajes de superposición estimados por muestreo.</small></p></main></body></html>"""
@@ -958,6 +985,9 @@ def ejecutar(ref=None, direccion=None, x=None, y=None, sr_punto=4326, salida=Non
     predios = cat.predios_de_terreno(ta["globalid"])
     predio = predio_buscado or next((p for p in predios if p["attributes"].get("numero_predial_nacional") == npn),
                                     predios[0] if predios else None)
+    if cat.sin_predios:
+        avisos.append("El catastro no tiene disponible hoy la tabla de predios: no se muestran área catastral, "
+                      "destinación ni estrato, y el cálculo usa el área geométrica del polígono.")
     if len(predios) > 1:
         avisos.append("El terreno tiene %d predios asociados (propiedad horizontal o englobe). "
                       "Se muestran los datos del predio %s." % (

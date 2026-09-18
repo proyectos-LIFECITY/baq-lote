@@ -1,5 +1,6 @@
 // Archivos de salida: DXF (R12), GeoJSON, CSV e informe HTML
 import { SR } from "./catastro.js";
+import { DESCARGO, URL_LIFECITY } from "./motor.js";
 import { abierto, bbox, centroide, lados, puntoInterior } from "./geom.js";
 
 const f4 = (v) => v.toFixed(4);
@@ -194,6 +195,9 @@ summary .n{background:var(--v2);color:var(--v);border-radius:10px;padding:0 8px;
 .els{padding:0 12px 6px} .pct{font-size:12px;color:var(--a);font-weight:600;margin:6px 0 4px}
 .avisos{background:var(--v2);border-left:4px solid var(--a);padding:10px 14px 10px 30px;border-radius:6px}
 a{color:var(--v)}
+.descargo{margin-top:28px;border:1px solid var(--b);border-left:4px solid var(--a);border-radius:8px;padding:12px 16px;font-size:12.5px;color:var(--m)}
+.cta-lc{margin:16px 0;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#1f7a4d;color:#fff;border-radius:10px;padding:16px 20px;font-size:14px}
+.cta-lc a{background:#fff;color:#14573a;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:8px;white-space:nowrap}
 @media print{header{-webkit-print-color-adjust:exact;print-color-adjust:exact} details{break-inside:avoid}}
 </style></head><body>
 <header><h1>Ficha de lote — Barranquilla</h1>
@@ -231,6 +235,12 @@ ${bloquesCapas}
 <div class="scroll"><table><tr><th>#</th><th>Área huella m²</th><th>Pisos</th><th>Detalle</th></tr>${filasCons}</table></div>
 <h2>Datos catastrales</h2>
 <div class="scroll"><table><tr><th>Campo</th><th>Valor</th></tr>${filasPredio}</table></div>
+<div class="descargo"><b>Descargo de responsabilidad.</b> ${esc(DESCARGO)} Este informe es de referencia y no constituye
+concepto de norma urbanística, certificado catastral ni licencia; Life City no se hace responsable por decisiones tomadas
+con base en él sin la validación ante la Secretaría de Planeación o una curaduría urbana.</div>
+<div class="cta-lc"><div><b>¿Vas a desarrollar este lote?</b><br>Life City lo lleva del lote a la obra con <b>Coordinación BIM Total</b>:
+modelado, coordinación de todas las disciplinas, detección de interferencias, planimetría y cantidades de obra.</div>
+<a href="${URL_LIFECITY}" target="_blank" rel="noopener">Solicitar propuesta</a></div>
 <p><small>Fuentes: ${esc(datos.catastro)} · WebMap Panorama Urbano (${esc(datos.webmap)}).
 Información de referencia; no reemplaza certificados catastrales, conceptos de norma urbanística
 ni licencias. Porcentajes de superposición estimados por muestreo.</small></p></main></body></html>`;

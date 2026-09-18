@@ -209,6 +209,12 @@ input, textarea { font: inherit; color: inherit; }
 .descarga div { flex: 1; display: grid; }
 .descarga small { color: var(--tinta-3); font-size: 12px; }
 .descarga svg { color: var(--tinta-3); }
+.cta-servicio { display: flex; align-items: center; gap: 12px; justify-content: space-between; text-decoration: none; border-radius: var(--radio); padding: 14px; margin-bottom: 12px; background: var(--acento-50); border: 1px solid color-mix(in srgb, var(--acento) 30%, transparent); color: var(--tinta); }
+.cta-servicio:hover { border-color: var(--acento); }
+.cta-servicio b { display: block; font-family: var(--titulos); font-size: 14.5px; }
+.cta-servicio span { font-size: 12.5px; color: var(--tinta-2); }
+.cta-servicio .cta-boton { flex: none; background: var(--acento); color: #fff; font-weight: 600; font-size: 12.5px; padding: 8px 12px; border-radius: 9px; }
+.descargo { font-size: 11.5px; line-height: 1.5; color: var(--tinta-3); border-left: 3px solid var(--linea-2); padding-left: 10px; margin: 0 0 12px; }
 .registro { font-size: 12px; }
 .registro summary { cursor: pointer; color: var(--tinta-3); padding: 6px 0; }
 .registro ol { margin: 6px 0 0; padding: 10px 10px 10px 30px; background: var(--superficie-2); border-radius: 10px; max-height: 220px; overflow: auto; font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; color: var(--tinta-2); }

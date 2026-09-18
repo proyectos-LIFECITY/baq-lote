@@ -209,6 +209,23 @@ a { color: inherit; }
 .perfiles h3 { font-size: 18px; margin-bottom: 8px; }
 .perfiles p { margin: 0; color: var(--tinta-2); font-size: 15px; }
 
+/* servicio principal */
+.servicio { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 40px; align-items: center; border: 1px solid var(--linea); border-radius: 28px; padding: 56px; background: linear-gradient(150deg, var(--acento-50), var(--superficie) 60%); }
+.servicio h2 { font-size: clamp(28px, 3.2vw, 40px); margin-bottom: 16px; }
+.servicio p { color: var(--tinta-2); font-size: 17px; margin: 0 0 20px; }
+.servicio p b { color: var(--tinta); }
+.servicio-lista { list-style: none; padding: 0; margin: 0 0 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
+.servicio-lista li { padding-left: 26px; position: relative; font-weight: 500; }
+.servicio-lista li::before { content: "✓"; position: absolute; left: 0; color: var(--acento); font-weight: 700; }
+.servicio-arte { color: var(--verde); }
+.btn-acento { background: var(--acento); color: #fff; box-shadow: 0 8px 20px -8px rgba(194, 98, 31, .7); }
+.btn-acento:hover { filter: brightness(.92); }
+.descargo-legal { padding: 0 0 72px; }
+.descargo-legal .contenedor { border: 1px solid var(--linea); border-left: 4px solid var(--acento); border-radius: 14px; padding: 24px 28px; background: var(--suave); }
+.descargo-legal h2 { font-size: 18px; margin-bottom: 10px; }
+.descargo-legal p { font-size: 13.5px; color: var(--tinta-2); margin: 0 0 10px; }
+.descargo-legal p:last-child { margin: 0; }
+
 /* preguntas */
 .faq { display: grid; gap: 12px; }
 .faq details { background: var(--superficie); border: 1px solid var(--linea); border-radius: 14px; padding: 0 22px; }
@@ -278,6 +295,10 @@ a { color: inherit; }
   .flecha { transform: rotate(90deg); }
   .columna { padding: 24px; }
   .rejilla-beneficios, .tres-pasos, .perfiles { grid-template-columns: 1fr; }
+  .servicio { grid-template-columns: 1fr; padding: 28px 22px; border-radius: 22px; }
+  .servicio-arte { display: none; }
+  .servicio-lista { grid-template-columns: 1fr; }
+  .servicio .btn { white-space: normal; height: auto; padding: 14px 18px; text-align: center; }
   .tres-pasos::before { display: none; }
   .cta-final { padding-bottom: 72px; }
   .cta-in { padding: 36px 24px; border-radius: 22px; }
